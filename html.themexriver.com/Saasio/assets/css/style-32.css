@@ -776,7 +776,6 @@ select:visited {
 .applghu-mobile-menu a.applghu-logo-wrapper {
     width: 140px;
     display: block;
-    margin: 0 auto;
     margin-bottom: 30px;
 }
 
@@ -1059,6 +1058,10 @@ select:visited {
     background: #1a1076;
     line-height: 50px;
     text-align: center;
+}
+
+.applghu-footer-contact-icon-box {
+    padding: 5px;
 }
 
 .applghu-footer-area .applghu-footer-contact .applghu-footer-single-contact .applghu-footer-contact-icon-box i {
@@ -2397,6 +2400,7 @@ select:visited {
     height: 60px;
     width: 60px;
     border-radius: 5px;
+    padding: 5px;
     background: #f0e4f7;
     display: inline-block;
     line-height: 60px;
