@@ -16,6 +16,43 @@
     <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/rs6-32.css">
     <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/revulation-arrow-32.css">
     <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/style-32.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+    <style>
+        .card-img {
+            height: 200px;
+            object-fit: fill;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+    
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+        }
+    
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    
+        .card-body h3 {
+            transition: color 0.3s ease;
+        }
+    
+        .card:hover .card-body h3 {
+            color: #007bff;
+        }
+    
+        .modal-dialog {
+            max-width: 90%;
+        }
+    
+        .modal-body {
+            max-height: 75vh;
+            overflow-y: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,8 +96,8 @@
                         <ul>
                             <li><a href="#applghu-hero">Home</a></li>
                             <li><a href="#applghu-about">About</a></li>
-                            <li><a href="#applghu-service">Service</a></li>
                             <li><a href="#applghu-project">Project</a></li>
+                            <li><a href="#applghu-service">Service</a></li>
                             <li><a href="#applghu-contact">Contact Us</a></li>
                         </ul>
                     </nav>
@@ -91,8 +128,8 @@
         <ul>
             <li><a href="#applghu-hero">Home</a></li>
             <li><a href="#applghu-about">About</a></li>
-            <li><a href="#applghu-service">Service</a></li>
             <li><a href="#applghu-project">Project</a></li>
+            <li><a href="#applghu-service">Service</a></li>
             <li><a href="#applghu-contact">Contact Us</a></li>
         </ul>
     </div>
@@ -318,7 +355,7 @@
         <img class="applghu-achievement-shape-one" src="html.themexriver.com/Saasio/assets/img/studio-img-32/achievement-shape-1.png" alt="achivement shape">
         <img class="applghu-achievement-shape-two" src="html.themexriver.com/Saasio/assets/img/studio-img-32/achievement-shape-2.png" alt="achivement shape">
         <img class="applghu-achievement-shape-three" src="html.themexriver.com/Saasio/assets/img/studio-img-32/achievement-shape-3.png" alt="achivement shape">
-
+        
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 d-flex align-items-center">
@@ -339,13 +376,6 @@
                     <div class="applghu-achievement-right">
                         <div class="row">
                             <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-achievement-box wow fadeInUp" data-wow-delay="0.2s">
-                                    <h2>30,000+</h2>
-                                    <p>sq.ft</p>
-                                    <p>Centring Material</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
                                 <div class="applghu-single-achievement-box wow fadeInUp" data-wow-delay="0.4s">
                                     <h2>100+</h2>
                                     <p>Worker (Carpainter, Fitter, labour, etc...)</p>
@@ -357,13 +387,353 @@
                                     <p>Quiality Check</p>
                                 </div>
                             </div>
+                            <div class="col-xl-6 col-sm-6 col-lg-6">
+                                <div class="applghu-single-achievement-box wow fadeInUp" data-wow-delay="0.2s">
+                                    <h2>30,000+</h2>
+                                    <p>sq.ft</p>
+                                    <p>Centring Material</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cardsModal">View Material</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Resources & Quality Assurance Start -->
+    <!-- Resources & Quality Assurance End -->
+
+    <!-- Material Popup section start -->
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="cardsModal" tabindex="-1" role="dialog" aria-labelledby="cardsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="cardsModalLabel">Our Centring Material</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row" id="card-container"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const cardsData = [
+                {
+                    title: "BAR BENDING MACHINE",
+                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2023/5/307375673/YA/XE/AY/1258844/spartan-sbm-55v-bar-bending-machines-500x500.png",
+                    description: "A bar bending machine efficiently bends steel bars for construction, ensuring precision, durability, and time savings.",
+                },
+                {
+                    title: "BAR CUTTING MACHINE",
+                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2022/10/LV/CJ/NR/141946453/bar-cutting-machine-500x500.jpg",
+                    description: "A bar cutting machine efficiently cuts steel bars to precise lengths for construction and reinforcement.",
+                },
+                {
+                    title: "CUPLOCK SCAFFOLDING",
+                    imgSrc: "https://images.jdmagicbox.com/quickquotes/images_main/mild-steel-red-color-vertical-standard-cuplock-scaffolding-pipe-3-meter-weight-13-7-kg-2222349926-x55594l3.jpg",
+                    description: "We offer cuplock scaffolding in sizes like <b>(1.5m, 2m, 2.5m, etc.)</b>, providing reliable support and safety.",
+                },
+                {
+                    title: "CONCRETE MIXER",
+                    imgSrc: "https://4.imimg.com/data4/YH/UT/MY-4587209/concrete-mixer.jpg",
+                    description: "A concrete mixer blends cement, water, and aggregates to create a homogenous mixture for construction.",
+                },
+                {
+                    title: "BASE PLATE",
+                    imgSrc: "https://www.grsscaffolding.com/images/product/base-plate.jpg",
+                    description: "Base plates provide a stable foundation for scaffolding, ensuring even load distribution and enhanced safety.",
+                },
+                {
+                    title: "H FRAMES",
+                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2020/12/YK/GF/CK/2379454/h-frames-scaffolding.jpg",
+                    description: "H-frame scaffolding offers a strong, stable support structure for construction, providing flexibility and easy assembly.",
+                },
+                {
+                    title: "MS PROPS",
+                    imgSrc: "https://5.imimg.com/data5/NN/KK/MY-2/ms-scaffolding-prop-jpg-500x500.jpg",
+                    description: "MS props provide adjustable support for scaffolding, ensuring stability and strength during construction.",
+                },
+                {
+                    title: "I CHANNEL",
+                    imgSrc: "https://bhagwatishuttering.com/wp-content/uploads/2020/06/steel_beams1.jpg",
+                    description: "I-channel shuttering for slabs offers strong, reliable support, ensuring stability and precision during construction.",
+                },
+                {
+                    title: "MS PLATE",
+                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2021/12/EV/YY/LJ/120128070/mild-steel-shuttering-plate-500x500.jpeg",
+                    description: "MS plates are essential for construction, offering high tensile strength and long-lasting reliability in supporting structures.",
+                },
+                {
+                    title: "CONCRETE LIFT MACHINE",
+                    imgSrc: "https://hipat.in/wp-content/uploads/2023/01/Concrete-Lift-Machine.jpg",
+                    description: "A concrete lift machine efficiently elevates and transfers concrete to higher levels on construction sites, ensuring quick and precise placement.",
+                },
+                {
+                    title: "LEDGER SCAFFOLDING",
+                    imgSrc: "https://udemandme.com/wp-content/uploads/2020/09/a33544a_dx_0109_photo_3009.jpg",
+                    description: "We offer Ledger of various sizes like (0.9m, 1.2m, 1.5m, etc.), ensuring strong support, enhanced stability, and reliable performance.",
+                },
+                {
+                    title: "CONCRETE WEIGHT BATCHER",
+                    imgSrc: "https://img1.exportersindia.com/product_images/bc-small/2018/7/3463491/digital-scale-type-machine-1793475.jpg",
+                    description: "A concrete weight batcher precisely measures and mixes ingredients, ensuring accurate proportions for high-quality concrete production.",
+                },
+                {
+                    title: "VIBRATOR MACHINE",
+                    imgSrc: "https://m.media-amazon.com/images/I/71UIpgz6GML.jpg",
+                    description: "The concrete vibrator machine removes air pockets for smooth concrete. We offer various needles for different applications.",
+                },
+                {
+                    title: "SQUARE TUBE",
+                    imgSrc: "https://www.jfeindia.com/img/cold-formed-sqaure-section-1.jpg",
+                    description: "Square tubes for slab shuttering offer durable support and precision in formwork. We provide a range of sizes to meet diverse construction requirements.",
+                },
+                {
+                    title: "ROUND TUBE",
+                    imgSrc: "https://cpimg.tistatic.com/08459626/b/4/Mild-Steel-Round-Tube.jpg",
+                    description: "Round tube bottom supports deliver robust stability for scaffolding, enhancing safety and effectively distributing loads during construction.",
+                },
+                {
+                    title: "TIE ROD",
+                    imgSrc: "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Large/tie-rod-end-18-20-mm-size-16-mm20240108100257.jpg",
+                    description: "Tie rods in column shuttering stabilize formwork, preventing spreading and ensuring proper alignment.",
+                },
+                {
+                    title: "WATERPROOF PLY",
+                    imgSrc: "https://5.imimg.com/data5/ANDROID/Default/2023/4/304298891/QO/YN/VV/24755526/product-jpeg-500x500.jpg",
+                    description: "Centring ply supports formwork during concrete casting, ensuring correct shape, stability, and a smooth finish.",
+                },
+                {
+                    title: "WOODEN PROPS",
+                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2021/12/FW/AQ/EW/22831734/shuttering-wooden-prop-rental-500x500.jpg",
+                    description: "We provide wooden props in different sizes (8ft, 9ft, and 10ft) to support formwork at various heights.",
+                },
+            ];
+        
+            const container = document.getElementById("card-container");
+
+            cardsData.forEach(({ title, imgSrc, description }) => {
+                const cardHTML = `
+                    <div class="col-sm-4" style="padding-top: 20px;">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top card-img" src="${imgSrc}" alt="${title}">
+                            <div class="card-body">
+                                <h5>${title}</h5>
+                                <p class="card-text" style="text-align: justify;">${description}</p>
+                            </div>
+                        </div>
+                    </div>`;
+                container.innerHTML += cardHTML;
+            });
+        </script>
+    </section>
+    <!-- Material Popup section end -->
+
+    <!-- Projects Start -->
+    <section id="applghu-project" class="applghu-projects-area" style="margin-top: 50px;">
+        <div class="container">
+
+            <!-- Section Heading Start -->
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="applghu-section-heading">
+                        <p class="applghu-section-heading-subtitle">Projects</p>
+                        <h2 class="applghu-section-heading-title">Our Team's work with Projects</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Section Heading End -->
+
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="applghu-project-navigation">
+                        <ul>
+                            <li class="active" data-filter="*">ALL</li>
+                            <li data-filter=".photo-edi">ONGOING</li>
+                            <li data-filter=".video-pro">COMPLETED</li>
+                            <!-- <li data-filter=".graphics-design">Graphics Design</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row applghu-project-grid">
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-big">
+                        <img src="https://is1-3.housingcdn.com/4f2250e8/44e322f62338d537b8e267a7d6b011e3/v0/fs/24life_exotica-dudulgaon-pune-24life.jpeg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <a href="https://www.24life.in/ongoing-projects.php" target="_blank"><i class="fas fa-info-circle"></i></a>
+                                <p>24 Life</p>
+                                <h3>24 Life Exotica in Dudulgaon, Pune</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-big">
+                        <img src="https://www.adityaenclave.com/wp-content/uploads/2023/06/Aditya-Enclave-bro-front-back-4-01-min-3-1024x724.jpg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <a href="https://www.adityaenclave.com/" target="_blank"><i class="fas fa-info-circle"></i></a>
+                                <h3>Aditya Enclave, Hinjewadi P2</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-big">
+                        <img src="https://is1-2.housingcdn.com/4f2250e8/99b5019bbfb6a5863c89aad37eeb255b/v0/fs/swaraaj_paradise_phase_3-pimple_saudagar-pune-swaraaj_developers.jpeg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Swaraaj Paradise</p>
+                                <h3>Swaraaj Reality, pimple saudagar</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://static.squareyards.com/resources/images/pune/project-image/kshitej-24-life-blooms-project-project-large-image1-2228.jpg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <p>24 Life</p>
+                                <h3>Kshitej 24 Life Blooms Tathawade Pune</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-big">
+                        <img src="https://is1-3.housingcdn.com/4f2250e8/6fbabb27e662b0cda006638d13630f86/v5/fs/shree_anand_royal_court-thergaon-pune-shree_anand_venkateshwara_construction.jpg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Shree Anand Royal Court in Thergaon</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://housing-images.n7net.in/4f2250e8/785e72ded01f9f79244c78a6dd616f6e/v5/medium/diamond_group_pune_bhalchandra_nagari-ravet-pune-diamond_developers.jpg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Vighnaharta Sai Saroj, Ravet</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://img.staticmb.com/mbimages/project/Photo_h240_w0/2023/04/03/Project-Photo-1-Sai-Dwarka-Paradise-Pune-5326107_345_1366_240_0.jpg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Krishna Rama Properties, Kiwale</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://assets.nobroker.in/media/building/8a9fb3827d7f1b44017d7f4573b4164a/images/8a9fb3827d7f1b44017d7f4573b4164a_project_image_feBw1CPG9h1638528375132_65891_iris_original.jpg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Sai Dwarka Paradise, Kiwale</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipMl4Z1zx0XfTSUwV49pdr9yxnA7wpVq6t14OZuY=s680-w680-h510" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Swaraaj Paradise, Pimple Saudagar, Pune</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://lh3.googleusercontent.com/96Tz8w54dfyhJ6yf0IZq4Rjo5ljf29Zpvy_BBG2az3Ylz8CXeBXXykBPOnsjxVMVmSuIu0TnCjlHbMBMWqUR=w3840-h3840-c-rw-v3" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Sonigara Rosalia, Dehu Road, Pune </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://housing-images.n7net.in/4f2250e8/035ad6d04c3aeed5e7109ea07dd7c28e/v0/fs.jpeg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Om Paradise, Vikas Nagar, Pune</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://housing-images.n7net.in/4f2250e8/be9d9e8be7fc4672c10fa6369e829381/v0/medium/mercury_artharaj_royal_cassia-dehu-pune-mercury_artharaj.jpeg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Anandban Society, Dehu</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
+                    <div class="applghu-single-project applghu-project-small">
+                        <img src="https://is1-3.housingcdn.com/012c1500/a121d8ca3898cc7722f9485d3924f556/v0/medium.jpeg" alt="">
+                        <div class="applghu-single-project-overlay">
+                            <div class="applghu-project-overlay-content">
+                                <i class="fas fa-info-circle"></i>
+                                <h3>Apple Aroma in Maan, Pune </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Projects End -->
 
     <!-- Service Start -->
     <section id="applghu-service" class="applghu-service-area" data-background="html.themexriver.com/Saasio/assets/img/studio-img-32/service-bg.jpg">
@@ -536,201 +906,6 @@
         </div>
     </section>
     <!-- Contact Us -->
-
-    <!-- Projects Start -->
-    <section id="applghu-project" class="applghu-projects-area">
-        <div class="container">
-
-            <!-- Section Heading Start -->
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="applghu-section-heading">
-                        <p class="applghu-section-heading-subtitle">Projects</p>
-                        <h2 class="applghu-section-heading-title">Our Team's work with Projects</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- Section Heading End -->
-
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="applghu-project-navigation">
-                        <ul>
-                            <li class="active" data-filter="*">ALL</li>
-                            <li data-filter=".photo-edi">ONGOING</li>
-                            <li data-filter=".video-pro">COMPLETED</li>
-                            <!-- <li data-filter=".graphics-design">Graphics Design</li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row applghu-project-grid">
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://is1-3.housingcdn.com/4f2250e8/44e322f62338d537b8e267a7d6b011e3/v0/fs/24life_exotica-dudulgaon-pune-24life.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <a href="https://www.24life.in/ongoing-projects.php" target="_blank"><i class="fas fa-info-circle"></i></a>
-                                <p>24 Life</p>
-                                <h3>24 Life Exotica in Dudulgaon, Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://www.adityaenclave.com/wp-content/uploads/2023/06/Aditya-Enclave-bro-front-back-4-01-min-3-1024x724.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <a href="https://www.adityaenclave.com/" target="_blank"><i class="fas fa-info-circle"></i></a>
-                                <h3>Aditya Enclave, Hinjewadi P2</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://is1-2.housingcdn.com/4f2250e8/99b5019bbfb6a5863c89aad37eeb255b/v0/fs/swaraaj_paradise_phase_3-pimple_saudagar-pune-swaraaj_developers.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <p>Swaraaj Paradise</p>
-                                <h3>Swaraaj Reality, pimple saudagar</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://static.squareyards.com/resources/images/pune/project-image/kshitej-24-life-blooms-project-project-large-image1-2228.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <p>24 Life</p>
-                                <h3>Kshitej 24 Life Blooms Tathawade Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://is1-3.housingcdn.com/4f2250e8/6fbabb27e662b0cda006638d13630f86/v5/fs/shree_anand_royal_court-thergaon-pune-shree_anand_venkateshwara_construction.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Shree Anand Royal Court in Thergaon</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro ">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://housing-images.n7net.in/4f2250e8/785e72ded01f9f79244c78a6dd616f6e/v5/medium/diamond_group_pune_bhalchandra_nagari-ravet-pune-diamond_developers.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Vighnaharta Sai Saroj, Ravet</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://img.staticmb.com/mbimages/project/Photo_h240_w0/2023/04/03/Project-Photo-1-Sai-Dwarka-Paradise-Pune-5326107_345_1366_240_0.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Krishna Rama Properties, Kiwale</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://assets.nobroker.in/media/building/8a9fb3827d7f1b44017d7f4573b4164a/images/8a9fb3827d7f1b44017d7f4573b4164a_project_image_feBw1CPG9h1638528375132_65891_iris_original.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Sai Dwarka Paradise, Kiwale</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipMl4Z1zx0XfTSUwV49pdr9yxnA7wpVq6t14OZuY=s680-w680-h510" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Swaraaj Paradise, Pimple Saudagar, Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://lh3.googleusercontent.com/96Tz8w54dfyhJ6yf0IZq4Rjo5ljf29Zpvy_BBG2az3Ylz8CXeBXXykBPOnsjxVMVmSuIu0TnCjlHbMBMWqUR=w3840-h3840-c-rw-v3" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Sonigara Rosalia, Dehu Road, Pune </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://housing-images.n7net.in/4f2250e8/035ad6d04c3aeed5e7109ea07dd7c28e/v0/fs.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Om Paradise, Vikas Nagar, Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://housing-images.n7net.in/4f2250e8/be9d9e8be7fc4672c10fa6369e829381/v0/medium/mercury_artharaj_royal_cassia-dehu-pune-mercury_artharaj.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Anandban Society, Dehu</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6 col-lg-6 applghu-project-item video-pro">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://is1-3.housingcdn.com/012c1500/a121d8ca3898cc7722f9485d3924f556/v0/medium.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Apple Aroma in Maan, Pune </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!-- Projects End -->
 
     <!-- Get In Touch Start -->
     <section class="applghu-get-in-touch-area">
@@ -986,6 +1161,7 @@
         }
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
