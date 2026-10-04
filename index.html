@@ -1,1168 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>SUJIT ASSOCIATE</title>
-    <link rel="shortcut icon" href="html.themexriver.com/Saasio/assets/img/fv.png" type="image/x-icon">
-    <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Css Fils -->
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/animate.css">
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/fontawesome-all.css">
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/flaticon-32.css">
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/rs6-32.css">
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/revulation-arrow-32.css">
-    <link rel="stylesheet" href="html.themexriver.com/Saasio/assets/css/style-32.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-
+    <meta name="theme-color" content="#20221f">
+    <meta name="description" content="Sujit Associate delivers RCC construction, structural design, foundation and superstructure services across Pune and Pimpri-Chinchwad.">
+    <title>Sujit Associate | RCC Construction & Structural Work</title>
+    <link rel="icon" href="html.themexriver.com/Saasio/assets/img/fv.png" type="image/x-icon">
     <style>
-        .card-img {
-            height: 200px;
-            object-fit: fill;
-            border-radius: 10px;
-            background-color: #f8f9fa;
+        @font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2") format("woff2"); }
+        @font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2") format("woff2"); }
+        @font-face { font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2") format("woff2"); }
+        @font-face { font-family: "Roboto"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2"); }
+        @font-face { font-family: "Roboto"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmEU9fBBc4.woff2") format("woff2"); }
+        @font-face { font-family: "Roboto"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmWUlfBBc4.woff2") format("woff2"); }
+        :root {
+            color-scheme: light;
+            --ink: #20221f;
+            --muted: #696b65;
+            --paper: #f7f7f4;
+            --white: #fff;
+            --line: #e4e4de;
+            --accent: #c77c49;
+            --accent-dark: #a95d30;
+            --dark: #20221f;
+            --serif: "Poppins", sans-serif;
+            --body: "Roboto", sans-serif;
+            --wrap: 1200px;
         }
-    
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 8px;
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+        body { margin: 0; color: var(--ink); background: var(--white); font: 16px/1.65 var(--body); -webkit-font-smoothing: antialiased; }
+        body.menu-open { overflow: hidden; }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; }
+        button, input, textarea { font: inherit; }
+        button, a { -webkit-tap-highlight-color: transparent; }
+        button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #d99b6f; outline-offset: 3px; }
+        .container { width: min(var(--wrap), calc(100% - 48px)); margin-inline: auto; }
+        .skip-link { position: fixed; top: 8px; left: 8px; z-index: 50; padding: 10px 14px; background: white; color: var(--ink); transform: translateY(-150%); }
+        .skip-link:focus { transform: translateY(0); }
+        .section { padding: 112px 0; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 11px; margin: 0 0 17px; color: var(--accent-dark); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+        .eyebrow::before { width: 24px; height: 1px; background: currentColor; content: ""; }
+        .section-title { max-width: 700px; margin: 0; font: 700 clamp(34px, 4.5vw, 58px)/1.08 var(--serif); letter-spacing: -.055em; }
+        .section-copy { max-width: 590px; margin: 20px 0 0; color: var(--muted); font-size: 17px; }
+        .button { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 12px; padding: 0 23px; border: 1px solid var(--accent); background: var(--accent); color: #fff; font-size: 14px; font-weight: 700; transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease; }
+        .button:hover { transform: translateY(-2px); border-color: var(--accent-dark); background: var(--accent-dark); color: #fff; }
+        .button--outline { border-color: rgba(255,255,255,.58); background: transparent; color: white; }
+        .button--outline:hover { border-color: white; background: white; color: var(--ink); }
+        .arrow { font-size: 18px; line-height: 1; transition: transform .2s ease; }
+        a:hover .arrow { transform: translateX(4px); }
+
+        .site-header { position: fixed; z-index: 20; inset: 0 0 auto; height: 88px; border-bottom: 1px solid rgba(255,255,255,.2); color: white; transition: height .25s ease, background .25s ease, box-shadow .25s ease, color .25s ease; }
+        .site-header.is-scrolled { height: 74px; border-color: var(--line); background: rgba(255,255,255,.97); color: var(--ink); box-shadow: 0 8px 28px rgba(23,25,22,.07); }
+        .header-inner { display: flex; height: 100%; align-items: center; justify-content: space-between; gap: 34px; }
+        .brand { display: flex; align-items: center; gap: 12px; color: inherit; white-space: nowrap; }
+        .brand-mark { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid var(--accent); color: var(--accent); font: 800 18px var(--serif); }
+        .brand-name { display: block; font: 800 16px/1.1 var(--serif); letter-spacing: -.04em; }
+        .brand-caption { display: block; margin-top: 4px; color: currentColor; font-size: 9px; font-weight: 600; letter-spacing: .19em; opacity: .72; text-transform: uppercase; }
+        .main-nav { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 36px); }
+        .main-nav a { position: relative; padding: 8px 0; font-size: 13px; font-weight: 600; }
+        .main-nav a::after { position: absolute; right: 0; bottom: 2px; left: 0; height: 1px; background: var(--accent); content: ""; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
+        .main-nav a:hover::after { transform: scaleX(1); }
+        .header-call { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+        .header-call-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: var(--accent); }
+        .is-scrolled .header-call-mark { border-color: var(--line); }
+        .menu-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; }
+        .menu-toggle span { display: block; height: 1px; margin: 5px 0; background: currentColor; transition: transform .2s ease; }
+        .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
+        .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
+
+        .hero { position: relative; display: flex; min-height: min(820px, 100svh); align-items: center; overflow: hidden; background: #353631 url("https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?q=85&w=2200&auto=format&fit=crop") center 54%/cover no-repeat; color: white; }
+        .hero::before { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(19,21,19,.82) 0%, rgba(19,21,19,.62) 43%, rgba(19,21,19,.13) 100%), linear-gradient(0deg, rgba(19,21,19,.25), transparent 45%); content: ""; }
+        .hero-content { position: relative; z-index: 1; padding-top: 80px; }
+        .hero .eyebrow { color: #e1a77d; }
+        .hero h1 { max-width: 760px; margin: 0; font: 700 clamp(48px, 7.4vw, 92px)/1.01 var(--serif); letter-spacing: -.065em; }
+        .hero h1 span { color: #e2a77e; }
+        .hero-copy { max-width: 535px; margin: 25px 0 31px; color: rgba(255,255,255,.82); font-size: clamp(16px, 1.5vw, 19px); }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .hero-note { position: absolute; right: max(24px, calc((100vw - var(--wrap))/2)); bottom: 40px; z-index: 1; color: rgba(255,255,255,.76); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; writing-mode: vertical-rl; }
+
+        .intro-strip { border-bottom: 1px solid var(--line); background: var(--paper); }
+        .intro-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+        .intro-item { display: flex; min-height: 102px; align-items: center; gap: 17px; padding: 18px 28px; border-right: 1px solid var(--line); }
+        .intro-item:first-child { border-left: 1px solid var(--line); }
+        .intro-number { color: var(--accent-dark); font: 700 29px/1 var(--serif); letter-spacing: -.05em; white-space: nowrap; }
+        .intro-label { color: var(--muted); font-size: 12px; line-height: 1.4; }
+
+        .about-grid { display: grid; grid-template-columns: .94fr 1fr; align-items: center; gap: clamp(48px, 8vw, 112px); }
+        .about-photo { position: relative; min-height: 555px; background: #ddd url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=85&w=1100&auto=format&fit=crop") center/cover no-repeat; }
+        .about-photo::after { position: absolute; inset: 16px -16px -16px 16px; z-index: -1; border: 1px solid #d9d7cf; content: ""; }
+        .about-badge { position: absolute; right: -1px; bottom: 0; width: 185px; padding: 23px; background: var(--accent); color: white; }
+        .about-badge strong { display: block; font: 700 36px/1 var(--serif); letter-spacing: -.06em; }
+        .about-badge span { display: block; margin-top: 7px; font-size: 12px; }
+        .about-text { margin: 20px 0 0; color: var(--muted); }
+        .about-text + .about-text { margin-top: 13px; }
+        .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin: 26px 0 30px; padding: 0; list-style: none; }
+        .about-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; font-weight: 600; }
+        .check { color: var(--accent-dark); font-weight: 800; }
+
+        .services { background: var(--paper); }
+        .section-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-bottom: 44px; }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #dcdcd6; border-left: 1px solid #dcdcd6; }
+        .service-card { position: relative; min-height: 260px; padding: 31px 29px 32px; border-right: 1px solid #dcdcd6; border-bottom: 1px solid #dcdcd6; background: transparent; transition: background .22s ease, transform .22s ease, box-shadow .22s ease; }
+        .service-card:hover { z-index: 1; transform: translateY(-4px); background: white; box-shadow: 0 18px 40px rgba(33,34,30,.07); }
+        .service-index { color: var(--accent-dark); font-size: 11px; font-weight: 700; letter-spacing: .13em; }
+        .service-icon { display: grid; width: 43px; height: 43px; margin: 24px 0 18px; place-items: center; border: 1px solid #d3d2ca; color: var(--accent-dark); font-size: 19px; }
+        .service-card h3 { margin: 0; font: 700 20px/1.25 var(--serif); letter-spacing: -.035em; }
+        .service-card p { margin: 12px 0 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+        .projects-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+        .filters { display: flex; flex-wrap: wrap; gap: 6px; }
+        .filter-button { padding: 10px 15px; border: 1px solid transparent; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer; transition: color .2s, background .2s, border-color .2s; }
+        .filter-button:hover, .filter-button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: white; }
+        .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .project-card { min-width: 0; }
+        .project-card[hidden] { display: none; }
+        .project-image { position: relative; aspect-ratio: 1.26; overflow: hidden; background: #e3e3df; }
+        .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.65,.3,1); }
+        .project-card:hover .project-image img { transform: scale(1.045); }
+        .project-status { position: absolute; top: 13px; left: 13px; padding: 6px 10px; background: rgba(255,255,255,.94); color: var(--ink); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+        .project-meta { display: flex; align-items: start; justify-content: space-between; gap: 14px; padding: 14px 2px 6px; }
+        .project-meta h3 { margin: 0; font: 700 17px/1.35 var(--serif); letter-spacing: -.025em; }
+        .project-meta p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+        .project-link { display: grid; width: 34px; height: 34px; flex: 0 0 34px; place-items: center; border: 1px solid var(--line); color: var(--accent-dark); font-size: 16px; transition: background .2s, color .2s; }
+        .project-link:hover { background: var(--accent); color: white; }
+
+        .process { background: var(--dark); color: white; }
+        .process .eyebrow { color: #dfa47c; }
+        .process .section-copy { color: #b9bbb4; }
+        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 52px; border-top: 1px solid #50514c; }
+        .process-step { position: relative; padding: 30px 30px 0 0; }
+        .process-step + .process-step { padding-left: 30px; border-left: 1px solid #50514c; }
+        .process-count { color: #dfa47c; font: 600 13px var(--serif); }
+        .process-step h3 { margin: 31px 0 11px; font: 700 23px var(--serif); letter-spacing: -.04em; }
+        .process-step p { max-width: 330px; margin: 0; color: #b9bbb4; font-size: 14px; }
+
+        .quality-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 90px; align-items: start; }
+        .quality-list { border-top: 1px solid var(--line); }
+        .quality-item { display: grid; grid-template-columns: 45px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+        .quality-item b { color: var(--accent-dark); font: 700 14px var(--serif); }
+        .quality-item h3 { margin: 0; font: 700 17px var(--serif); }
+        .quality-item p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+        .resource-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 34px; padding: 22px 24px; background: var(--paper); }
+        .resource-panel strong { display: block; font: 700 17px var(--serif); }
+        .resource-panel span { color: var(--muted); font-size: 12px; }
+        .text-button { padding: 10px 0; border: 0; border-bottom: 1px solid var(--accent); background: transparent; color: var(--accent-dark); font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+        .fact-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 42px; background: #dcdcd6; border: 1px solid #dcdcd6; }
+        .fact { padding: 22px 18px; background: white; }
+        .fact strong { display: block; font: 700 27px/1.1 var(--serif); letter-spacing: -.04em; }
+        .fact span { display: block; margin-top: 7px; color: var(--muted); font-size: 11px; line-height: 1.4; }
+
+        .contact-section { background: var(--paper); }
+        .contact-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: 82px; align-items: start; }
+        .contact-details { margin-top: 33px; border-top: 1px solid var(--line); }
+        .contact-detail { padding: 18px 0; border-bottom: 1px solid var(--line); }
+        .contact-detail span { display: block; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+        .contact-detail a, .contact-detail p { display: block; margin: 5px 0 0; font-size: 14px; font-weight: 600; }
+        .contact-form { padding: 32px; background: white; box-shadow: 0 18px 50px rgba(33,34,30,.06); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .field { display: grid; gap: 7px; }
+        .field--wide { grid-column: 1/-1; }
+        .field label { font-size: 12px; font-weight: 700; }
+        .field input, .field textarea { width: 100%; min-height: 49px; padding: 12px 13px; border: 1px solid #deded8; border-radius: 0; background: #fff; color: var(--ink); }
+        .field textarea { min-height: 125px; resize: vertical; }
+        .contact-form .button { margin-top: 20px; cursor: pointer; }
+        .form-note { margin: 12px 0 0; color: var(--muted); font-size: 11px; }
+        .map-wrap { width: 100%; height: 330px; margin-top: 66px; overflow: hidden; background: #e8e8e4; }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+        .closing-cta { position: relative; overflow: hidden; padding: 72px 0; background: #d8d5cd; }
+        .closing-inner { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+        .closing-inner h2 { max-width: 720px; margin: 0; font: 700 clamp(30px, 4vw, 50px)/1.1 var(--serif); letter-spacing: -.055em; }
+        .closing-inner .eyebrow { margin-bottom: 12px; }
+        .site-footer { padding: 65px 0 24px; background: var(--dark); color: white; }
+        .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 65px; padding-bottom: 48px; }
+        .footer-about { max-width: 340px; margin: 17px 0 0; color: #b9bbb4; font-size: 13px; }
+        .footer-heading { margin: 3px 0 18px; font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+        .footer-links { display: grid; gap: 11px; color: #c7c8c2; font-size: 13px; }
+        .footer-links a:hover { color: #e2a77e; }
+        .footer-bottom { display: flex; justify-content: space-between; gap: 16px; padding-top: 19px; border-top: 1px solid #494a44; color: #aeb0a9; font-size: 11px; }
+        .footer-social { display: flex; gap: 18px; margin-top: 19px; color: #e2a77e; font-size: 12px; font-weight: 700; }
+        .back-top { position: fixed; right: 20px; bottom: 20px; z-index: 10; display: grid; width: 42px; height: 42px; place-items: center; background: var(--ink); color: white; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s, transform .2s; }
+        .back-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+        .equipment-dialog { width: min(940px, calc(100% - 32px)); max-height: min(88vh, 850px); padding: 0; border: 0; background: white; color: var(--ink); box-shadow: 0 25px 90px rgba(0,0,0,.35); }
+        .equipment-dialog::backdrop { background: rgba(20,21,19,.72); }
+        .dialog-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; padding: 19px 24px; border-bottom: 1px solid var(--line); background: white; }
+        .dialog-head h2 { margin: 0; font: 700 21px var(--serif); }
+        .dialog-close { width: 38px; height: 38px; border: 1px solid var(--line); background: white; color: var(--ink); font-size: 23px; cursor: pointer; }
+        .equipment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 22px; overflow-y: auto; }
+        .equipment-card { border: 1px solid var(--line); }
+        .equipment-card img { width: 100%; height: 150px; object-fit: cover; background: var(--paper); }
+        .equipment-card h3 { margin: 12px 13px 5px; font: 700 12px var(--serif); }
+        .equipment-card p { margin: 0; padding: 0 13px 14px; color: var(--muted); font-size: 11px; line-height: 1.55; }
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.65,.3,1); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .reveal { opacity: 1; transform: none; }
         }
-    
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        @media (max-width: 900px) {
+            .main-nav { gap: 16px; }
+            .header-call { display: none; }
+            .about-grid, .quality-grid, .contact-grid { gap: 48px; }
+            .about-photo { min-height: 470px; }
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-top { gap: 35px; }
         }
-    
-        .card-body h3 {
-            transition: color 0.3s ease;
+        @media (max-width: 680px) {
+            html { scroll-padding-top: 74px; }
+            .container { width: min(100% - 36px, var(--wrap)); }
+            .section { padding: 78px 0; }
+            .site-header, .site-header.is-scrolled { height: 70px; border-color: rgba(255,255,255,.18); }
+            .site-header.is-scrolled { border-color: var(--line); }
+            .header-inner { gap: 14px; }
+            .brand-mark { width: 35px; height: 35px; }
+            .brand-name { font-size: 14px; }
+            .menu-toggle { display: block; flex: 0 0 44px; }
+            .main-nav { position: fixed; top: 70px; right: 0; left: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 9px 22px 19px; border-bottom: 1px solid var(--line); background: white; color: var(--ink); box-shadow: 0 15px 30px rgba(0,0,0,.1); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .2s, transform .2s; }
+            .main-nav.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+            .main-nav a { padding: 13px 3px; border-bottom: 1px solid var(--line); font-size: 14px; }
+            .main-nav a::after { display: none; }
+            .hero { min-height: 720px; min-height: 92svh; background-position: 60% center; }
+            .hero::before { background: linear-gradient(90deg, rgba(19,21,19,.78), rgba(19,21,19,.4)), linear-gradient(0deg, rgba(19,21,19,.35), transparent 70%); }
+            .hero-content { padding-top: 74px; }
+            .hero h1 { max-width: 520px; font-size: clamp(48px, 13vw, 72px); }
+            .hero-note { display: none; }
+            .intro-grid { grid-template-columns: 1fr; }
+            .intro-item, .intro-item:first-child { min-height: 75px; padding: 13px 5px; border: 0; border-bottom: 1px solid var(--line); }
+            .intro-item:last-child { border-bottom: 0; }
+            .intro-number { min-width: 91px; font-size: 24px; }
+            .about-grid, .quality-grid, .contact-grid { grid-template-columns: 1fr; gap: 46px; }
+            .about-photo { min-height: 390px; margin-right: 12px; }
+            .about-points { grid-template-columns: 1fr; }
+            .section-heading-row, .projects-head { align-items: start; flex-direction: column; gap: 21px; }
+            .section-heading-row { margin-bottom: 30px; }
+            .service-grid { grid-template-columns: 1fr; }
+            .service-card { min-height: 0; padding: 24px; }
+            .service-icon { margin: 17px 0 14px; }
+            .project-grid { grid-template-columns: 1fr; gap: 23px; }
+            .project-image { aspect-ratio: 1.35; }
+            .process-grid { grid-template-columns: 1fr; margin-top: 37px; }
+            .process-step, .process-step + .process-step { padding: 23px 0; border-left: 0; border-bottom: 1px solid #50514c; }
+            .process-step h3 { margin: 16px 0 8px; }
+            .resource-panel { align-items: start; flex-direction: column; gap: 12px; }
+            .fact-row { grid-template-columns: 1fr; }
+            .fact { padding: 17px 19px; }
+            .contact-form { padding: 22px 18px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .field--wide { grid-column: auto; }
+            .map-wrap { height: 280px; margin-top: 42px; }
+            .closing-inner { align-items: start; flex-direction: column; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 34px 24px; }
+            .footer-top > :first-child { grid-column: 1/-1; }
+            .footer-bottom { flex-direction: column; }
+            .equipment-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 13px; }
+            .equipment-card img { height: 115px; }
         }
-    
-        .card:hover .card-body h3 {
-            color: #007bff;
-        }
-    
-        .modal-dialog {
-            max-width: 90%;
-        }
-    
-        .modal-body {
-            max-height: 75vh;
-            overflow-y: auto;
+        @media (max-width: 370px) {
+            .container { width: calc(100% - 28px); }
+            .hero h1 { font-size: 45px; }
+            .hero-actions { align-items: stretch; flex-direction: column; }
+            .button { width: 100%; }
+            .equipment-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-
 <body>
-
-
-    <!-- Preloader-->
-    <div class="loading-preloader">
-        <div id="loading-preloader">
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-            <div class="line_shape"></div>
-        </div>
-    </div>
-    <!-- Preloader End -->
-
-
-    <!-- ScrollTop Button -->
-    <a href="#" class="applghu-scroll-top"><i class="fas fa-angle-up"></i></a>
-
-    <!-- Header Start -->
-    <header class="applghu-header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-2 col-lg-2 col-md-2 col-3">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img class="applghu-logo-normal" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo_1.png" alt="Creative Design Studio">
-                            <img class="applghu-logo-sticky" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo.png" alt="Creative Design Studio">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-7 d-none d-lg-block text-right">
-                    <nav class="applghu-navigation">
-                        <ul>
-                            <li><a href="#applghu-hero">Home</a></li>
-                            <li><a href="#applghu-about">About</a></li>
-                            <li><a href="#applghu-project">Project</a></li>
-                            <li><a href="#applghu-service">Service</a></li>
-                            <li><a href="#applghu-contact">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-xl-3 col-9 col-lg-3 col-md-10 text-sm-left text-lg-left text-xl-left text-right">
-                    <div class="applghu-header-cta">
-                        <div class="applghu-header-cta-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="applghu-header-cta-content">
-                            <span class="applghu-header-cta-text">Get In Touch</span>
-                            <span class="applghu-header-cta-num">+91 869 897 5858</span>
-                        </div>
-                    </div>
-                    <div class="applghu-mobile-menu-hamburger">
-                        <a href="#"><i class="fas fa-bars"></i></a>
-                    </div>
-                </div>
-            </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home" aria-label="Sujit Associate home">
+                <span class="brand-mark" aria-hidden="true">S</span>
+                <span><span class="brand-name">Sujit Associate</span><span class="brand-caption">RCC construction</span></span>
+            </a>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#approach">Our approach</a><a href="#contact">Contact</a>
+            </nav>
+            <a class="header-call" href="tel:+918698975858"><span class="header-call-mark" aria-hidden="true">↗</span><span>+91 869 897 5858</span></a>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
         </div>
     </header>
-    <!-- Header End -->
 
-    <!-- Mobile Menu -->
-    <div class="applghu-mobile-menu">
-        <a href="#" class="applghu-menu-close"><i class="fas fa-times"></i></a>
-        <a href="#" class="applghu-logo-wrapper"><img src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo_1.png" alt=""></a>
-        <ul>
-            <li><a href="#applghu-hero">Home</a></li>
-            <li><a href="#applghu-about">About</a></li>
-            <li><a href="#applghu-project">Project</a></li>
-            <li><a href="#applghu-service">Service</a></li>
-            <li><a href="#applghu-contact">Contact Us</a></li>
-        </ul>
-    </div>
-    <!-- Mobile Menu End -->
-
-
-    <!-- Hero Start -->
-    <!-- Revulation slider -->
-    <div class="applghu-revulation-slider" id="applghu-hero">
-        <!-- START Slider 3 REVOLUTION SLIDER 6.4.6 -->
-        <p class="rs-p-wp-fix"></p>
-        <rs-module-wrap id="rev_slider_4_1_wrapper" data-alias="slider-3" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
-            <rs-module id="rev_slider_4_1" data-version="6.4.6">
-                <rs-slides>
-
-                    <rs-slide data-key="rs-8" data-title="Slide" data-thumb="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-bg-1-50x100.jpg" data-in="o:0;" data-out="a:false;">
-                        <img src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" title="hero-bg" width="1920" height="931" class="rev-slidebg tp-rs-img" data-panzoom="d:10000;ss:100;se:125%;" data-no-retina>
-                        <rs-group id="slider-4-slide-8-layer-3" class="applghu-hero-content-wrapper" data-type="group" data-rsp_ch="on" data-xy="x:15px;y:c;yo:75px;" data-text="w:normal;" data-dim="w:831;h:499;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sA:9000;" style="z-index:14;">
-
-                            <rs-layer id="slider-4-slide-8-layer-4" class="applghu-hero-subtitle" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:3;y:89;" data-text="w:normal;s:24;l:24;fw:700;" data-frame_0="y:-50;" data-frame_1="st:1500;sp:1000;"
-                                data-frame_999="o:0;st:w;" style="z-index:11;font-family:Roboto;">Welcome To Sujit Associate
-                            </rs-layer>
-                            
-                            <rs-layer id="slider-4-slide-8-layer-5" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:1px;y:135px;" data-text="w:normal;s:100;l:100;fw:700;" data-dim="h:220px;" data-frame_0="o:1;" data-frame_0_chars="d:5;x:105%;o:1;rY:45deg;rZ:90deg;"
-                                data-frame_0_mask="u:t;" data-frame_1="st:1800;sp:1200;" data-frame_1_chars="e:power4.inOut;d:10;rZ:0deg;" data-frame_1_mask="u:t;" data-frame_999="o:0;st:w;" style="z-index:12;font-family:Poppins;">To Construct <br /> Your Dream Space
-                            </rs-layer>
-                            
-                            <a id="slider-4-slide-8-layer-6" class="rs-layer applghu-hero-btn rev-btn" href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:5px;y:366px;" data-text="w:normal;s:17;l:40;fw:500;" data-dim="minh:0px;"
-                                data-padding="r:25;l:25;" data-border="bos:solid;boc:rgba(255,255,255,0.35);bow:1px,1px,1px,1px;" data-frame_0="y:50;" data-frame_1="st:2000;sp:1000;" data-frame_999="o:0;st:w;" data-frame_hover="bgc:rgba(0,0,0,0);boc:rgba(255,255,255,0.75);bor:0px,0px,0px,0px;bos:solid;bow:1px,1px,1px,1px;e:power1.inOut;"
-                                style="z-index:13;background-color:rgba(0,0,0,0);font-family:Roboto;">Start a Chat <span><i class="fab fa-whatsapp"></i></span>
-                            </a>
-                        </rs-group>
-
-                        <rs-layer id="slider-4-slide-8-layer-0" data-type="image" data-rsp_ch="on" data-text="w:normal;" data-dim="w:100%;h:100%;" data-basealign="slide" data-frame_1="st:500;" data-frame_999="o:0;st:w;" style="z-index:8;">
-                            <img src="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-overlay-1.png" alt="" class="tp-rs-img" width="1920" height="931" data-c="cover-proportional" data-no-retina>
-                        </rs-layer>
-
-                        <rs-layer id="slider-4-slide-8-layer-1" data-type="image" data-rsp_ch="on" data-text="w:normal;" data-dim="w:552px;h:999px;" data-basealign="slide" data-frame_0="x:-50;" data-frame_1="st:500;sp:1000;" data-frame_999="o:0;st:w;" style="z-index:9;">
-                            <img src="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-shape-left.png" alt="" class="applghu-hero-shape-left tp-rs-img" width="552" height="999" data-no-retina>
-                        </rs-layer>
-
-                        <rs-layer id="slider-4-slide-8-layer-2" data-type="image" data-rsp_ch="on" data-xy="x:r;" data-text="w:normal;" data-dim="w:309px;h:594px;" data-basealign="slide" data-frame_0="x:50;" data-frame_1="st:800;sp:1000;" data-frame_999="o:0;st:w;"
-                            style="z-index:10;"><img src="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-shape-right.png" alt="" class="applghu-hero-shape-right tp-rs-img" width="309" height="594" data-no-retina>
-                        </rs-layer>
-
-                    </rs-slide>
-                    
-                    <rs-slide data-key="rs-9" data-title="Slide" data-thumb="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-bg-2-scaled-50x100.jpg" data-in="o:0;" data-out="a:false;">
-                        <img src="https://storage.googleapis.com/dtb-strapi/Screenshot_2024_07_19_at_9_52_19_AM_min_f59d37e78d/Screenshot_2024_07_19_at_9_52_19_AM_min_f59d37e78d.png" alt="" title="Retouching img/studio-img-32 in special program.Portrait of graphic designer working in office with laptop,monitor,graphic drawing tablet and color palette.Retoucher workplace in photo studio.Creative agency" width="2560" height="1707" class="rev-slidebg tp-rs-img" data-panzoom="d:10000;ss:100;se:125%;" data-no-retina>
-                        
-                        <rs-group id="slider-4-slide-9-layer-3" class="applghu-hero-content-wrapper" data-type="group" data-rsp_ch="on" data-xy="x:15px;y:c;yo:75px;" data-text="w:normal;" data-dim="w:831;h:499;" data-frame_0="o:1;" data-frame_999="o:0;st:w;sA:9000;" style="z-index:14;">
-                            <rs-layer id="slider-4-slide-9-layer-4" class="applghu-hero-subtitle" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:3;y:89;" data-text="w:normal;s:24;l:24;fw:700;" data-frame_0="y:-50;" data-frame_1="st:1500;sp:1000;"
-                                data-frame_999="o:0;st:w;" style="z-index:11;font-family:Roboto;">Welcome To Sujit Associate
-                            </rs-layer>
-
-                            <rs-layer id="slider-4-slide-9-layer-5" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:1px;y:135px;" data-text="w:normal;s:100;l:100;fw:700;" data-dim="h:220px;" data-frame_0="o:1;" data-frame_0_chars="d:5;x:105%;o:1;rY:45deg;rZ:90deg;"
-                                data-frame_0_mask="u:t;" data-frame_1="st:1800;sp:1200;" data-frame_1_chars="e:power4.inOut;d:10;rZ:0deg;" data-frame_1_mask="u:t;" data-frame_999="o:0;st:w;" style="z-index:12;font-family:Poppins;">To Construct <br /> Your Dream Space
-                            </rs-layer>
-                            
-                            <a id="slider-4-slide-9-layer-6" class="rs-layer applghu-hero-btn rev-btn" href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:5px;y:366px;" data-text="w:normal;s:17;l:40;fw:500;" data-dim="minh:0px;"
-                                data-padding="r:25;l:25;" data-border="bos:solid;boc:rgba(255,255,255,0.35);bow:1px,1px,1px,1px;" data-frame_0="y:50;" data-frame_1="st:2000;sp:1000;" data-frame_999="o:0;st:w;" data-frame_hover="bgc:rgba(0,0,0,0);boc:rgba(255,255,255,0.75);bor:0px,0px,0px,0px;bos:solid;bow:1px,1px,1px,1px;e:power1.inOut;"
-                                style="z-index:13;background-color:rgba(0,0,0,0);font-family:Roboto;">Start a Chat<span><i class="fab fa-whatsapp"></i></span>
-                            </a>
-                        </rs-group>
-
-                        <rs-layer id="slider-4-slide-9-layer-0" data-type="image" data-rsp_ch="on" data-text="w:normal;" data-dim="w:100%;h:100%;" data-basealign="slide" data-frame_1="st:500;" data-frame_999="o:0;st:w;" style="z-index:8;">
-                            <img src="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-overlay-1.png" alt="" class="tp-rs-img" width="1920" height="931" data-c="cover-proportional" data-no-retina>
-                        </rs-layer>
-
-                        <rs-layer id="slider-4-slide-9-layer-1" data-type="image" data-rsp_ch="on" data-text="w:normal;" data-dim="w:552px;h:999px;" data-basealign="slide" data-frame_0="x:-50;" data-frame_1="st:500;sp:1000;" data-frame_999="o:0;st:w;" style="z-index:9;">
-                            <img src="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-shape-left.png" alt="" class="applghu-hero-shape-left tp-rs-img" width="552" height="999" data-no-retina>
-                        </rs-layer>
-
-                        <rs-layer id="slider-4-slide-9-layer-2" data-type="image" data-rsp_ch="on" data-xy="x:r;" data-text="w:normal;" data-dim="w:309px;h:594px;" data-basealign="slide" data-frame_0="x:50;" data-frame_1="st:800;sp:1000;" data-frame_999="o:0;st:w;" style="z-index:10;">
-                            <img src="html.themexriver.com/Saasio/assets/img/studio-img-32/hero-shape-right.png" alt="" class="applghu-hero-shape-right tp-rs-img" width="309" height="594" data-no-retina>
-                        </rs-layer>
-
-                    </rs-slide>
-
-                </rs-slides>
-            </rs-module>
-
-            <script>
-                if (typeof revslider_showDoubleJqueryError === "undefined") {
-                    function revslider_showDoubleJqueryError(sliderID) {
-                        var err = "<div class='rs_error_message_box'>";
-                        err += "<div class='rs_error_message_oops'>Oops...</div>";
-                        err += "<div class='rs_error_message_content'>";
-                        err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
-                        err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
-                        err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
-                        err += "</div>";
-                        err += "</div>";
-                        var slider = document.getElementById(sliderID);
-                        slider.innerHTML = err;
-                        slider.style.display = "block";
-                    }
-                }
-            </script>
-        </rs-module-wrap>
-        <!-- END REVOLUTION SLIDER -->
-    </div>
-    <!-- Hero End -->
-
-    <!-- Features Start -->
-    <section class="applghu-features-area">
-
-        <div class="container applghu-feature-container">
-            <img class="applghu-feature-shape-left" src="html.themexriver.com/Saasio/assets/img/studio-img-32/feature-shape-left.png" alt="">
-            <img class="applghu-feature-shape-right" src="html.themexriver.com/Saasio/assets/img/studio-img-32/feature-shape-right.png" alt="">
-
-            <!-- Section Heading Start -->
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="applghu-section-heading">
-                        <p class="applghu-section-heading-subtitle">We Work R.C.C Substructure & Superstructure of building</p>
-                        <h2 class="applghu-section-heading-title">Steps of our work</h2>
-                    </div>
+    <main id="main">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="container hero-content reveal">
+                <p class="eyebrow">Sujit Associate · Pune</p>
+                <h1 id="hero-title">A strong foundation for <span>what comes next.</span></h1>
+                <p class="hero-copy">RCC construction and structural work, delivered with care, precision and 30 years of expertise.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#projects">Explore our work <span class="arrow" aria-hidden="true">→</span></a>
+                    <a class="button button--outline" href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" rel="noopener noreferrer">Start a conversation <span class="arrow" aria-hidden="true">↗</span></a>
                 </div>
             </div>
-            <!-- Section Heading End -->
+            <span class="hero-note" aria-hidden="true">Built with care · Pune, Maharashtra</span>
+        </section>
 
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-features wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="applghu-feature-icon-box">
-                            <i class="fas fa-drafting-compass"></i>
-                        </div>
-                        <h3>Design and Planning</h3>
-                        <p style="text-align: justify;">
-                            We collaborate with clients and consultants to create architectural and RCC designs, carefully analyzing every detail and ensuring innovative, functional, and durable solutions through open communication and adherence to the highest quality standards.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-features wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="applghu-feature-icon-box">
-                            <i class="fas fa-laptop-house"></i>
-                        </div>
-                        <h3>Foundation or Substructure</h3>
-                        <p style="text-align: justify;">
-                            We specialize in accurate foundation and substructure construction, including PCC, footings, and beams, ensuring strength, stability, and durability. We create a dependable base that guarantees the long-term integrity of every structure.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-features wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="applghu-feature-icon-box">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>Superstructure</h3>
-                        <p style="text-align: justify;">
-                            Our superstructure services include the precise construction of columns, beams, slabs, staircases, water tanks, lift caps, and more. Each component is designed to meet load-bearing requirements, delivering safe, functional, and reliable structures.
-                        </p>
-                    </div>
-                </div>
+        <div class="intro-strip" aria-label="Company highlights">
+            <div class="container intro-grid">
+                <div class="intro-item"><strong class="intro-number">30 years</strong><span class="intro-label">of construction expertise</span></div>
+                <div class="intro-item"><strong class="intro-number">RCC</strong><span class="intro-label">Substructure &amp; superstructure specialists</span></div>
+                <div class="intro-item"><strong class="intro-number">Pune</strong><span class="intro-label">Working across the Pimpri-Chinchwad region</span></div>
             </div>
         </div>
-    </section>
-    <!-- Features End -->
 
-    <!-- About Start -->
-    <section id="applghu-about" class="applghu-about-area">
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="about-photo reveal" role="img" aria-label="Modern high-rise architecture in a city"><div class="about-badge"><strong>30 years</strong><span>of construction expertise</span></div></div>
+                <div class="reveal">
+                    <p class="eyebrow">About Sujit Associate</p>
+                    <h2 class="section-title">We build more than structures.</h2>
+                    <p class="about-text">At Sujit Associate, we specialize in delivering high-quality RCC (Reinforced Cement Concrete) work for construction projects. With 30 years of expertise, we combine precision, innovation, and a deep understanding of structural engineering to ensure every project is built on a strong foundation.</p>
+                    <p class="about-text">Our dedicated team collaborates with architects, consultants, and clients to design and execute customized, durable, and sustainable structures. From foundations and superstructures to specialized components, we focus on reliable, safe, and efficient construction.</p>
+                    <ul class="about-points">
+                        <li><span class="check" aria-hidden="true">✓</span> Collaborative project delivery</li>
+                        <li><span class="check" aria-hidden="true">✓</span> RCC construction expertise</li>
+                        <li><span class="check" aria-hidden="true">✓</span> Quality-focused execution</li>
+                        <li><span class="check" aria-hidden="true">✓</span> Tailored structural solutions</li>
+                    </ul>
+                    <a class="button" href="#contact">Get in touch <span class="arrow" aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="section-heading-row reveal">
+                    <div><p class="eyebrow">What we do</p><h2 class="section-title">Thoughtful work.<br>Solid results.</h2></div>
+                    <p class="section-copy">From the first structural decisions through the final concrete pour, we bring care to every part of the build.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card reveal"><span class="service-index">01 / DESIGN</span><span class="service-icon" aria-hidden="true">⌘</span><h3>Structural Design</h3><p>Beams, columns, slabs and foundations tailored to the specific requirements of each project.</p></article>
+                    <article class="service-card reveal"><span class="service-index">02 / SUBSTRUCTURE</span><span class="service-icon" aria-hidden="true">▱</span><h3>Foundation Work</h3><p>RCC foundations including isolated footings and raft foundations, built for stability and durability.</p></article>
+                    <article class="service-card reveal"><span class="service-index">03 / CONCRETE</span><span class="service-icon" aria-hidden="true">▤</span><h3>Slabs &amp; Flooring</h3><p>RCC flat, ribbed and waffle slabs planned around the structure and its intended use.</p></article>
+                    <article class="service-card reveal"><span class="service-index">04 / STRUCTURE</span><span class="service-icon" aria-hidden="true">⌗</span><h3>Beams &amp; Columns</h3><p>Load-bearing RCC elements constructed to meet structural and seismic requirements.</p></article>
+                    <article class="service-card reveal"><span class="service-index">05 / ACCESS</span><span class="service-icon" aria-hidden="true">↗</span><h3>Staircases &amp; Ramps</h3><p>Safe, functional RCC staircases and ramps shaped to architectural and safety needs.</p></article>
+                    <article class="service-card reveal"><span class="service-index">06 / WATER</span><span class="service-icon" aria-hidden="true">◯</span><h3>Water Tanks &amp; Reservoirs</h3><p>Durable water-retaining structures designed to provide reliable water storage.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="projects-head reveal">
+                    <div><p class="eyebrow">Selected work</p><h2 class="section-title">Projects across Pune.</h2><p class="section-copy">A selection of ongoing and completed projects from the Sujit Associate portfolio.</p></div>
+                    <div class="filters" role="group" aria-label="Filter projects">
+                        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All projects</button>
+                        <button class="filter-button" type="button" data-filter="ongoing" aria-pressed="false">Ongoing</button>
+                        <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+                    </div>
+                </div>
+                <div class="project-grid" id="project-grid">
+                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="https://is1-3.housingcdn.com/4f2250e8/44e322f62338d537b8e267a7d6b011e3/v0/fs/24life_exotica-dudulgaon-pune-24life.jpeg" alt="24 Life Exotica residential project" loading="lazy"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>24 Life Exotica</h3><p>Dudulgaon, Pune</p></div><a class="project-link" href="https://www.24life.in/ongoing-projects.php" target="_blank" rel="noopener noreferrer" aria-label="Visit 24 Life Exotica project website">↗</a></div></article>
+                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="https://www.adityaenclave.com/wp-content/uploads/2023/06/Aditya-Enclave-bro-front-back-4-01-min-3-1024x724.jpg" alt="Aditya Enclave project" loading="lazy"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>Aditya Enclave</h3><p>Hinjewadi P2</p></div><a class="project-link" href="https://www.adityaenclave.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Aditya Enclave project website">↗</a></div></article>
+                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="https://is1-2.housingcdn.com/4f2250e8/99b5019bbfb6a5863c89aad37eeb255b/v0/fs/swaraaj_paradise_phase_3-pimple_saudagar-pune-swaraaj_developers.jpeg" alt="Swaraaj Paradise Phase 3" loading="lazy"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>Swaraaj Paradise</h3><p>Pimple Saudagar, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://static.squareyards.com/resources/images/pune/project-image/kshitej-24-life-blooms-project-project-large-image1-2228.jpg" alt="Kshitej 24 Life Blooms project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Kshitej 24 Life Blooms</h3><p>Tathawade, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://is1-3.housingcdn.com/4f2250e8/6fbabb27e662b0cda006638d13630f86/v5/fs/shree_anand_royal_court-thergaon-pune-shree_anand_venkateshwara_construction.jpg" alt="Shree Anand Royal Court project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Shree Anand Royal Court</h3><p>Thergaon</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://housing-images.n7net.in/4f2250e8/785e72ded01f9f79244c78a6dd616f6e/v5/medium/diamond_group_pune_bhalchandra_nagari-ravet-pune-diamond_developers.jpg" alt="Vighnaharta Sai Saroj project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Vighnaharta Sai Saroj</h3><p>Ravet</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://img.staticmb.com/mbimages/project/Photo_h240_w0/2023/04/03/Project-Photo-1-Sai-Dwarka-Paradise-Pune-5326107_345_1366_240_0.jpg" alt="Krishna Rama Properties project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Krishna Rama Properties</h3><p>Kiwale</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://assets.nobroker.in/media/building/8a9fb3827d7f1b44017d7f4573b4164a/images/8a9fb3827d7f1b44017d7f4573b4164a_project_image_feBw1CPG9h1638528375132_65891_iris_original.jpg" alt="Sai Dwarka Paradise project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Sai Dwarka Paradise</h3><p>Kiwale</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://lh3.googleusercontent.com/p/AF1QipMl4Z1zx0XfTSUwV49pdr9yxnA7wpVq6t14OZuY=s680-w680-h510" alt="Swaraaj Paradise residential project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Swaraaj Paradise</h3><p>Pimple Saudagar, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://lh3.googleusercontent.com/96Tz8w54dfyhJ6yf0IZq4Rjo5ljf29Zpvy_BBG2az3Ylz8CXeBXXykBPOnsjxVMVmSuIu0TnCjlHbMBMWqUR=w3840-h3840-c-rw-v3" alt="Sonigara Rosalia residential project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Sonigara Rosalia</h3><p>Dehu Road, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://housing-images.n7net.in/4f2250e8/035ad6d04c3aeed5e7109ea07dd7c28e/v0/fs.jpeg" alt="Om Paradise residential project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Om Paradise</h3><p>Vikas Nagar, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://housing-images.n7net.in/4f2250e8/be9d9e8be7fc4672c10fa6369e829381/v0/medium/mercury_artharaj_royal_cassia-dehu-pune-mercury_artharaj.jpeg" alt="Anandban Society project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Anandban Society</h3><p>Dehu</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://is1-3.housingcdn.com/012c1500/a121d8ca3898cc7722f9485d3924f556/v0/medium.jpeg" alt="Apple Aroma project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Apple Aroma</h3><p>Maan, Pune</p></div></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section process" id="approach">
+            <div class="container">
+                <div class="reveal"><p class="eyebrow">Our approach</p><h2 class="section-title">From first plan to final pour.</h2><p class="section-copy">A considered construction process, grounded in communication, structural care and reliable execution.</p></div>
+                <div class="process-grid">
+                    <article class="process-step reveal"><span class="process-count">01 — BEGIN WITH A PLAN</span><h3>Design &amp; planning</h3><p>We collaborate with clients and consultants on architectural and RCC designs, analyzing project needs and details together.</p></article>
+                    <article class="process-step reveal"><span class="process-count">02 — BUILD THE BASE</span><h3>Foundation &amp; substructure</h3><p>From PCC to footings and beams, we build the dependable base that supports long-term structural integrity.</p></article>
+                    <article class="process-step reveal"><span class="process-count">03 — RAISE THE STRUCTURE</span><h3>Superstructure</h3><p>Columns, beams, slabs, staircases and other RCC components are built for safe, functional performance.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="why-us">
+            <div class="container quality-grid">
+                <div class="reveal"><p class="eyebrow">Resources &amp; quality assurance</p><h2 class="section-title">The right people, tools and attention on site.</h2><p class="section-copy">A dedicated team, careful checks and construction resources support every project from the ground up.</p><div class="resource-panel"><div><strong>Our centring material</strong><span>Explore equipment and site resources</span></div><button class="text-button" id="open-equipment" type="button">View equipment ↗</button></div></div>
+                <div class="reveal">
+                    <div class="quality-list">
+                        <article class="quality-item"><b>01</b><div><h3>Quick response</h3><p>We understand the importance of timely communication.</p></div></article>
+                        <article class="quality-item"><b>02</b><div><h3>Experienced team</h3><p>We bring our knowledge and experience to every project.</p></div></article>
+                        <article class="quality-item"><b>03</b><div><h3>Project support</h3><p>Your project is our priority. We are here whenever you need us.</p></div></article>
+                        <article class="quality-item"><b>04</b><div><h3>Flexible payment</h3><p>Payment plans tailored to suit your project.</p></div></article>
+                    </div>
+                    <div class="fact-row" aria-label="Company resources and project highlights">
+                        <div class="fact"><strong>150+</strong><span>Projects completed</span></div>
+                        <div class="fact"><strong>100+</strong><span>Workers, including carpenters, fitters and labour</span></div>
+                        <div class="fact"><strong>10+</strong><span>Quality checks</span></div>
+                        <div class="fact"><strong>30,000+</strong><span>sq.ft of centring material</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="reveal"><p class="eyebrow">Get in touch</p><h2 class="section-title">Let’s talk about your next project.</h2><p class="section-copy">Tell us a little about what you have in mind. We’ll help you take the next step.</p>
+                        <div class="contact-details">
+                            <div class="contact-detail"><span>Visit</span><p>Wakad Road, 4/1/0458, Datta Mandir, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057</p></div>
+                            <div class="contact-detail"><span>Call</span><a href="tel:+918698975858">+91 869 897 5858</a></div>
+                            <div class="contact-detail"><span>Email</span><a href="mailto:sujitassociates@gmail.com">sujitassociates@gmail.com</a></div>
+                        </div>
+                    </div>
+                    <form class="contact-form reveal" id="contact-form">
+                        <div class="form-grid">
+                            <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+                            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+                            <div class="field field--wide"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+                            <div class="field field--wide"><label for="subject">Project / subject</label><input id="subject" name="subject" required></div>
+                            <div class="field field--wide"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div>
+                        </div>
+                        <button class="button" type="submit">Prepare email <span class="arrow" aria-hidden="true">→</span></button>
+                        <p class="form-note">This form opens your email app with your message addressed to Sujit Associate.</p>
+                    </form>
+                </div>
+                <div class="map-wrap reveal" aria-label="Map showing Sujit Associate in Wakad"><iframe title="Map showing Sujit Associate in Wakad, Pimpri-Chinchwad" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d945.3293626788042!2d73.76588026839934!3d18.604786023337798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1734259493169!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+            </div>
+        </section>
+
+        <section class="closing-cta">
+            <div class="container closing-inner reveal"><div><p class="eyebrow">Start a conversation</p><h2>Planning something built to last?</h2></div><a class="button" href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" rel="noopener noreferrer">Message us on WhatsApp <span class="arrow" aria-hidden="true">↗</span></a></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-md-5">
-                    <nav class="applghu-navigation">
-                        <ul>
-                            <li>
-                                <a href="#applghu-project">
-                                    <div class="applghu-about-img">
-                                        <img src="https://images.unsplash.com/photo-1674821770946-4f774b1907d7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About left">
-                                        <div class="applghu-about-project-box">
-                                            <h2>150+</h2>
-                                            <p>Project Completed</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-xl-7 col-md-7">
-                    <div class="applghu-about-content">
-                        <p class="applghu-about-sub-title">About Us</p>
-                        <h2 class="applghu-about-title">We Build<br> What You Dream</h2>
-
-                        <p class="applghu-about-text" style="text-align: justify;">
-                            At Sujit Associate, we specialize in delivering high-quality RCC (Reinforced Cement Concrete) work for construction projects. With 30 years of expertise, we combine precision, innovation, and a deep understanding of structural engineering to ensure every project is built on a strong foundation. 
-                        </p>
-                        <p class="applghu-about-text" style="text-align: justify;">
-                            Our dedicated team collaborates with architects, consultants, and clients to design and execute customized, durable, and sustainable structures. Whether it's foundations, superstructures, or specialized components like water tanks and lift caps, we are committed to delivering reliable, safe, and efficient construction services.
-                        </p>
-
-                        <div class="applghu-about-progressbar-area">
-                            <div class="applghu-single-progress-parent">
-                                <h3>Quality Service</h3>
-                                <div class="applghu-single-progress">
-                                    <div class="applghu-single-progress-bar" data-percent="85">
-                                        <span>85%</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="applghu-single-progress-parent">
-                                <h3>Project Completed</h3>
-                                <div class="applghu-single-progress">
-                                    <div class="applghu-single-progress-bar" data-percent="90">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="footer-top">
+                <div><a class="brand" href="#home" aria-label="Sujit Associate home"><span class="brand-mark" aria-hidden="true">S</span><span><span class="brand-name">Sujit Associate</span><span class="brand-caption">RCC construction</span></span></a><p class="footer-about">We build more than structures—we build trust, relationships and a better future.</p><div class="footer-social"><a href="https://www.instagram.com/sujit_bhanavase/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
+                <div><h2 class="footer-heading">Explore</h2><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></nav></div>
+                <div><h2 class="footer-heading">Contact</h2><div class="footer-links"><a href="tel:+918698975858">+91 869 897 5858</a><a href="mailto:sujitassociates@gmail.com">sujitassociates@gmail.com</a><span>Datta Mandir, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057</span></div></div>
             </div>
-        </div>
-    </section>
-    <!-- About End -->
-
-    <!-- Resources & Quality Assurance Start -->
-    <section class="applghu-achievement-area" data-background="html.themexriver.com/Saasio/assets/img/studio-img-32/achievement-bg.jpg">
-        <img class="applghu-achievement-shape-one" src="html.themexriver.com/Saasio/assets/img/studio-img-32/achievement-shape-1.png" alt="achivement shape">
-        <img class="applghu-achievement-shape-two" src="html.themexriver.com/Saasio/assets/img/studio-img-32/achievement-shape-2.png" alt="achivement shape">
-        <img class="applghu-achievement-shape-three" src="html.themexriver.com/Saasio/assets/img/studio-img-32/achievement-shape-3.png" alt="achivement shape">
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 d-flex align-items-center">
-                    <div class="applghu-achievement-left">
-                        <p class="applghu-achievement-left-sub-title">Resources & Quality Assurance</p>
-                        <h2 class="applghu-achievement-left-title">Why choose our <br> associate for your projects?</h2>
-                        <p class="applghu-achievement-left-text">We are a group of dedicated professionals, always learning, improving, and aiming for perfection in every build.</p>
-                        <nav class="applghu-navigation">
-                            <ul>
-                                <li>
-                                    <a class="applghu-achievement-btn" href="#applghu-contact">Order Service <span><i class="fas fa-thumbs-up"></i></span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="applghu-achievement-right">
-                        <div class="row">
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-achievement-box wow fadeInUp" data-wow-delay="0.4s">
-                                    <h2>100+</h2>
-                                    <p>Worker (Carpainter, Fitter, labour, etc...)</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-achievement-box wow fadeInUp" data-wow-delay="0.6s">
-                                    <h2>10+</h2>
-                                    <p>Quiality Check</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-achievement-box wow fadeInUp" data-wow-delay="0.2s">
-                                    <h2>30,000+</h2>
-                                    <p>sq.ft</p>
-                                    <p>Centring Material</p>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cardsModal">View Material</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Resources & Quality Assurance End -->
-
-    <!-- Material Popup section start -->
-    <section>
-        <!-- Modal -->
-        <div class="modal fade" id="cardsModal" tabindex="-1" role="dialog" aria-labelledby="cardsModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="cardsModalLabel">Our Centring Material</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row" id="card-container"></div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            const cardsData = [
-                {
-                    title: "BAR BENDING MACHINE",
-                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2023/5/307375673/YA/XE/AY/1258844/spartan-sbm-55v-bar-bending-machines-500x500.png",
-                    description: "A bar bending machine efficiently bends steel bars for construction, ensuring precision, durability, and time savings.",
-                },
-                {
-                    title: "BAR CUTTING MACHINE",
-                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2022/10/LV/CJ/NR/141946453/bar-cutting-machine-500x500.jpg",
-                    description: "A bar cutting machine efficiently cuts steel bars to precise lengths for construction and reinforcement.",
-                },
-                {
-                    title: "CUPLOCK SCAFFOLDING",
-                    imgSrc: "https://images.jdmagicbox.com/quickquotes/images_main/mild-steel-red-color-vertical-standard-cuplock-scaffolding-pipe-3-meter-weight-13-7-kg-2222349926-x55594l3.jpg",
-                    description: "We offer cuplock scaffolding in sizes like <b>(1.5m, 2m, 2.5m, etc.)</b>, providing reliable support and safety.",
-                },
-                {
-                    title: "CONCRETE MIXER",
-                    imgSrc: "https://4.imimg.com/data4/YH/UT/MY-4587209/concrete-mixer.jpg",
-                    description: "A concrete mixer blends cement, water, and aggregates to create a homogenous mixture for construction.",
-                },
-                {
-                    title: "BASE PLATE",
-                    imgSrc: "https://www.grsscaffolding.com/images/product/base-plate.jpg",
-                    description: "Base plates provide a stable foundation for scaffolding, ensuring even load distribution and enhanced safety.",
-                },
-                {
-                    title: "H FRAMES",
-                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2020/12/YK/GF/CK/2379454/h-frames-scaffolding.jpg",
-                    description: "H-frame scaffolding offers a strong, stable support structure for construction, providing flexibility and easy assembly.",
-                },
-                {
-                    title: "MS PROPS",
-                    imgSrc: "https://5.imimg.com/data5/NN/KK/MY-2/ms-scaffolding-prop-jpg-500x500.jpg",
-                    description: "MS props provide adjustable support for scaffolding, ensuring stability and strength during construction.",
-                },
-                {
-                    title: "I CHANNEL",
-                    imgSrc: "https://bhagwatishuttering.com/wp-content/uploads/2020/06/steel_beams1.jpg",
-                    description: "I-channel shuttering for slabs offers strong, reliable support, ensuring stability and precision during construction.",
-                },
-                {
-                    title: "MS PLATE",
-                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2021/12/EV/YY/LJ/120128070/mild-steel-shuttering-plate-500x500.jpeg",
-                    description: "MS plates are essential for construction, offering high tensile strength and long-lasting reliability in supporting structures.",
-                },
-                {
-                    title: "CONCRETE LIFT MACHINE",
-                    imgSrc: "https://hipat.in/wp-content/uploads/2023/01/Concrete-Lift-Machine.jpg",
-                    description: "A concrete lift machine efficiently elevates and transfers concrete to higher levels on construction sites, ensuring quick and precise placement.",
-                },
-                {
-                    title: "LEDGER SCAFFOLDING",
-                    imgSrc: "https://udemandme.com/wp-content/uploads/2020/09/a33544a_dx_0109_photo_3009.jpg",
-                    description: "We offer Ledger of various sizes like (0.9m, 1.2m, 1.5m, etc.), ensuring strong support, enhanced stability, and reliable performance.",
-                },
-                {
-                    title: "CONCRETE WEIGHT BATCHER",
-                    imgSrc: "https://img1.exportersindia.com/product_images/bc-small/2018/7/3463491/digital-scale-type-machine-1793475.jpg",
-                    description: "A concrete weight batcher precisely measures and mixes ingredients, ensuring accurate proportions for high-quality concrete production.",
-                },
-                {
-                    title: "VIBRATOR MACHINE",
-                    imgSrc: "https://m.media-amazon.com/images/I/71UIpgz6GML.jpg",
-                    description: "The concrete vibrator machine removes air pockets for smooth concrete. We offer various needles for different applications.",
-                },
-                {
-                    title: "SQUARE TUBE",
-                    imgSrc: "https://www.jfeindia.com/img/cold-formed-sqaure-section-1.jpg",
-                    description: "Square tubes for slab shuttering offer durable support and precision in formwork. We provide a range of sizes to meet diverse construction requirements.",
-                },
-                {
-                    title: "ROUND TUBE",
-                    imgSrc: "https://cpimg.tistatic.com/08459626/b/4/Mild-Steel-Round-Tube.jpg",
-                    description: "Round tube bottom supports deliver robust stability for scaffolding, enhancing safety and effectively distributing loads during construction.",
-                },
-                {
-                    title: "TIE ROD",
-                    imgSrc: "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Large/tie-rod-end-18-20-mm-size-16-mm20240108100257.jpg",
-                    description: "Tie rods in column shuttering stabilize formwork, preventing spreading and ensuring proper alignment.",
-                },
-                {
-                    title: "WATERPROOF PLY",
-                    imgSrc: "https://5.imimg.com/data5/ANDROID/Default/2023/4/304298891/QO/YN/VV/24755526/product-jpeg-500x500.jpg",
-                    description: "Centring ply supports formwork during concrete casting, ensuring correct shape, stability, and a smooth finish.",
-                },
-                {
-                    title: "WOODEN PROPS",
-                    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2021/12/FW/AQ/EW/22831734/shuttering-wooden-prop-rental-500x500.jpg",
-                    description: "We provide wooden props in different sizes (8ft, 9ft, and 10ft) to support formwork at various heights.",
-                },
-            ];
-        
-            const container = document.getElementById("card-container");
-
-            cardsData.forEach(({ title, imgSrc, description }) => {
-                const cardHTML = `
-                    <div class="col-sm-4" style="padding-top: 20px;">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top card-img" src="${imgSrc}" alt="${title}">
-                            <div class="card-body">
-                                <h5>${title}</h5>
-                                <p class="card-text" style="text-align: justify;">${description}</p>
-                            </div>
-                        </div>
-                    </div>`;
-                container.innerHTML += cardHTML;
-            });
-        </script>
-    </section>
-    <!-- Material Popup section end -->
-
-    <!-- Projects Start -->
-    <section id="applghu-project" class="applghu-projects-area" style="margin-top: 50px;">
-        <div class="container">
-
-            <!-- Section Heading Start -->
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="applghu-section-heading">
-                        <p class="applghu-section-heading-subtitle">Projects</p>
-                        <h2 class="applghu-section-heading-title">Our Team's work with Projects</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- Section Heading End -->
-
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="applghu-project-navigation">
-                        <ul>
-                            <li class="active" data-filter="*">ALL</li>
-                            <li data-filter=".photo-edi">ONGOING</li>
-                            <li data-filter=".video-pro">COMPLETED</li>
-                            <!-- <li data-filter=".graphics-design">Graphics Design</li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row applghu-project-grid">
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://is1-3.housingcdn.com/4f2250e8/44e322f62338d537b8e267a7d6b011e3/v0/fs/24life_exotica-dudulgaon-pune-24life.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <a href="https://www.24life.in/ongoing-projects.php" target="_blank"><i class="fas fa-info-circle"></i></a>
-                                <p>24 Life</p>
-                                <h3>24 Life Exotica in Dudulgaon, Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://www.adityaenclave.com/wp-content/uploads/2023/06/Aditya-Enclave-bro-front-back-4-01-min-3-1024x724.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <a href="https://www.adityaenclave.com/" target="_blank"><i class="fas fa-info-circle"></i></a>
-                                <h3>Aditya Enclave, Hinjewadi P2</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item graphics-design photo-edi" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://is1-2.housingcdn.com/4f2250e8/99b5019bbfb6a5863c89aad37eeb255b/v0/fs/swaraaj_paradise_phase_3-pimple_saudagar-pune-swaraaj_developers.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <p>Swaraaj Paradise</p>
-                                <h3>Swaraaj Reality, pimple saudagar</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://static.squareyards.com/resources/images/pune/project-image/kshitej-24-life-blooms-project-project-large-image1-2228.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <p>24 Life</p>
-                                <h3>Kshitej 24 Life Blooms Tathawade Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-big">
-                        <img src="https://is1-3.housingcdn.com/4f2250e8/6fbabb27e662b0cda006638d13630f86/v5/fs/shree_anand_royal_court-thergaon-pune-shree_anand_venkateshwara_construction.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Shree Anand Royal Court in Thergaon</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://housing-images.n7net.in/4f2250e8/785e72ded01f9f79244c78a6dd616f6e/v5/medium/diamond_group_pune_bhalchandra_nagari-ravet-pune-diamond_developers.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Vighnaharta Sai Saroj, Ravet</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://img.staticmb.com/mbimages/project/Photo_h240_w0/2023/04/03/Project-Photo-1-Sai-Dwarka-Paradise-Pune-5326107_345_1366_240_0.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Krishna Rama Properties, Kiwale</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://assets.nobroker.in/media/building/8a9fb3827d7f1b44017d7f4573b4164a/images/8a9fb3827d7f1b44017d7f4573b4164a_project_image_feBw1CPG9h1638528375132_65891_iris_original.jpg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Sai Dwarka Paradise, Kiwale</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipMl4Z1zx0XfTSUwV49pdr9yxnA7wpVq6t14OZuY=s680-w680-h510" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Swaraaj Paradise, Pimple Saudagar, Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://lh3.googleusercontent.com/96Tz8w54dfyhJ6yf0IZq4Rjo5ljf29Zpvy_BBG2az3Ylz8CXeBXXykBPOnsjxVMVmSuIu0TnCjlHbMBMWqUR=w3840-h3840-c-rw-v3" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Sonigara Rosalia, Dehu Road, Pune </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://housing-images.n7net.in/4f2250e8/035ad6d04c3aeed5e7109ea07dd7c28e/v0/fs.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Om Paradise, Vikas Nagar, Pune</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://housing-images.n7net.in/4f2250e8/be9d9e8be7fc4672c10fa6369e829381/v0/medium/mercury_artharaj_royal_cassia-dehu-pune-mercury_artharaj.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Anandban Society, Dehu</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-md-6 col-lg-6 applghu-project-item video-pro" style="padding-bottom: 2px;">
-                    <div class="applghu-single-project applghu-project-small">
-                        <img src="https://is1-3.housingcdn.com/012c1500/a121d8ca3898cc7722f9485d3924f556/v0/medium.jpeg" alt="">
-                        <div class="applghu-single-project-overlay">
-                            <div class="applghu-project-overlay-content">
-                                <i class="fas fa-info-circle"></i>
-                                <h3>Apple Aroma in Maan, Pune </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!-- Projects End -->
-
-    <!-- Service Start -->
-    <section id="applghu-service" class="applghu-service-area" data-background="html.themexriver.com/Saasio/assets/img/studio-img-32/service-bg.jpg">
-        <div class="container">
-
-            <!-- Section Heading Start -->
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="applghu-section-heading">
-                        <p class="applghu-section-heading-subtitle">Our Service</p>
-                        <h2 class="applghu-section-heading-title">Take Business Services From <br> Our Experienced Stuff</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- Section Heading End -->
-
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-service wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="applghu-service-icon-box">
-                            <i class="fas fa-truck-pickup"></i>
-                        </div>
-                        <h3>Structural Design</h3>
-                        <p style="text-align: justify;">We design beams, columns, slabs, and foundations tailored to the specific requirements of your project.</p>
-
-                        <a class="applghu-service-btn" href="#">
-								<i class="fas fa-plus"></i>
-							</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-service wow fadeInUp applghu-border-left-none applghu-border-right-none" data-wow-delay="0.4s">
-                        <div class="applghu-service-icon-box">
-                            <i class="fas fa-truck-pickup"></i>
-                        </div>
-                        <h3>Foundation Work</h3>
-                        <p style="text-align: justify;">Our foundation work includes the construction of various types of RCC foundations, such as isolated footings, raft foundations, etc...</p>
-
-                        <a class="applghu-service-btn" href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-service applghu-small-screen-border-right-none wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="applghu-service-icon-box">
-                            <i class="fas fa-truck-pickup"></i>
-                        </div>
-                        <h3>Slabs and Flooring</h3>
-                        <p style="text-align: justify;">We offer specialized services in the construction of RCC slabs, including flat slabs, ribbed slabs, and waffle slabs.</p>
-
-                        <a class="applghu-service-btn" href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-service wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="applghu-service-icon-box">
-                            <i class="fas fa-truck-pickup"></i>
-                        </div>
-                        <h3>Beams and Columns</h3>
-                        <p style="text-align: justify;">We construct RCC beams and columns that form the backbone of any structure, ensuring they are designed and built to withstand load-bearing requirements and seismic forces.</p>
-
-                        <a class="applghu-service-btn" href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-service wow fadeInUp applghu-border-left-none applghu-border-right-none" data-wow-delay="0.4s">
-                        <div class="applghu-service-icon-box">
-                            <i class="fas fa-truck-pickup"></i>
-                        </div>
-                        <h3>Staircases and Ramps</h3>
-                        <p style="text-align: justify;">Our RCC construction services include the design and building of sturdy, aesthetically pleasing staircases and ramps that meet all safety standards and architectural requirements.</p>
-
-                        <a class="applghu-service-btn" href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-single-service wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="applghu-service-icon-box">
-                            <i class="fas fa-truck-pickup"></i>
-                        </div>
-                        <h3>Water Tanks and Reservoirs</h3>
-                        <p style="text-align: justify;">We construct durable RCC water tanks, reservoirs, and other water-retaining structures that are built to last and provide reliable water storage solutions.</p>
-
-                        <a class="applghu-service-btn" href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Service End -->
-
-    <!-- Contact Us -->
-    <section id="applghu-contact" class="applghu-whychoose-us-area" data-background="html.themexriver.com/Saasio/assets/img/studio-img-32/why-choose-us-bg.png">
-
-        <img class="applghu-whychoose-us-shape" src="html.themexriver.com/Saasio/assets/img/studio-img-32/whychoose-us-shape.png" alt="whychoose-us-shape">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="applghu-whychoose-us-left">
-                        <h3 class="applghu-whychoose-us-left-subtitle">Contact Us</h3>
-                        <h2 class="applghu-whychoose-us-left-title">we are here to help you with all your construction needs.</h2>
-                        
-                        <div class="applghu-whychooseus-form">
-                            <form action="#">
-                                <div class="applghu-whychoose-form-input">
-                                    <input type="text" placeholder="Name">
-                                    <input type="email" placeholder="Email">
-                                    <input type="number" placeholder="Phone">
-                                    <input type="text" placeholder="Subject">
-                                </div>
-                                <textarea placeholder="Type Your Text"></textarea>
-                                <input type="submit" value="Submit Now">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="applghu-whychoose-us-right">
-                        <div class="row">
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-whychoose wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="applghu-whychoose-icon-box">
-                                        <i class="fa fa-mobile-phone"></i>
-                                    </div>
-                                    <h3>Quick Response</h3>
-                                    <p>We understand the importance of timely communication.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-whychoose wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="applghu-whychoose-icon-box">
-                                        <i class="fa fa-group"></i>
-                                    </div>
-                                    <h3>Exprinced Team</h3>
-                                    <p>We bring our knowledge and experience to every project.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-whychoose wow fadeInUp" data-wow-delay="0.6s">
-                                    <div class="applghu-whychoose-icon-box">
-                                        <i class="fa fa-clock-o"></i>
-                                    </div>
-                                    <h3>24/7 Support</h3>
-                                    <p>Your project is our priority. We are here whenever you need us.</p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-sm-6 col-lg-6">
-                                <div class="applghu-single-whychoose wow fadeInUp" data-wow-delay="0.8s">
-                                    <div class="applghu-whychoose-icon-box">
-                                        <i class="fa fa-cc-paypal"></i>
-                                    </div>
-                                    <h3>Flexible Payment</h3>
-                                    <p>Offer tailored payment plans to suit your project.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Us -->
-
-    <!-- Get In Touch Start -->
-    <section class="applghu-get-in-touch-area">
-        <div class="container">
-
-            <!-- Section Heading Start -->
-            <div class="row">
-                <div class="col-xl-12 text-center">
-                    <div class="applghu-section-heading">
-                        <p class="applghu-section-heading-subtitle">Get In Touch</p>
-                        <h2 class="applghu-section-heading-title">Feel free to contact with us <br> any time.</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- Section Heading End -->
-
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="applghu-get-in-touch-content-wrap">
-                        <div class="row">
-                            <div class="col-xl-7">
-                                <div class="applghu-get-in-touch-map-wrap">
-                                    <div id="applghu-get-in-touch-map">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d945.3293626788042!2d73.76588026839934!3d18.604786023337798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1734259493169!5m2!1sen!2sin" width="100" height="415" style="border:0;"
-                                            allowfullscreen="" loading="lazy"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5">
-                                <div class="applghu-get-in-touch-contact-info">
-                                    <div class="applghu-single-get-in-touch-info wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="applghu-get-in-touch-info-icon-box">
-                                            <i class="fas fa-map-marker-alt icon"></i>
-                                        </div>
-                                        <div class="applghu-get-in-touch-info-text">
-                                            <h3>Address:</h3>
-                                            <p>Wakad Road, 4/1/0458, Datta Mandir, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057</p>
-                                        </div>
-                                    </div>
-                                    <div class="applghu-single-get-in-touch-info wow fadeInUp" data-wow-delay="0.4s">
-                                        <div class="applghu-get-in-touch-info-icon-box">
-                                            <i class="fas fa-phone-alt icon"></i>
-                                        </div>
-                                        <div class="applghu-get-in-touch-info-text">
-                                            <h3>Phone:</h3>
-                                            <p>
-                                                <span>+91 869 897 5858</span>
-                                                <span>+91 869 897 5858</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="applghu-single-get-in-touch-info wow fadeInUp" data-wow-delay="0.6s">
-                                        <div class="applghu-get-in-touch-info-icon-box">
-                                            <i class="fas fa-envelope icon"></i>
-                                        </div>
-                                        <div class="applghu-get-in-touch-info-text">
-                                            <h3>Email:</h3>
-                                            <p>
-                                                <span>sujitassociates@gmail.com</span>
-                                                <!-- <span>Support@Example.Com</span> -->
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- Get In Touch End -->
-
-    <!-- Footer Start -->
-    <footer style="margin-top: 70px;" class="applghu-footer-area" data-background="html.themexriver.com/Saasio/assets/img/studio-img-32/footer-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="applghu-footer-top">
-                        <div class="applghu-footer-logo">
-                            <img src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo_1.png" alt="Footer Logo">
-                        </div>
-
-                        <div class="applghu-footer-navigation">
-                            <nav class="applghu-navigation">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#applghu-about">About</a></li>
-                                    <li><a href="#applghu-service">Service</a></li>
-                                    <li><a href="#applghu-project">Project</a></li>
-                                    <li><a href="#applghu-contact">Contact us</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-footer-about applghu-footer-widget">
-                        <h3>About Us</h3>
-                        <p>Welcome to Sujit Associate, where we build more than just structures—we build trust, relationships, and a better future.</p>
-                        <ul class="applghu-footer-about-social">
-                            <!-- <li><a href="#"><i class="fab fa-facebook-f"></i></a></li> -->
-                            <li><a href="https://www.instagram.com/sujit_bhanavase/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://wa.me/918698975858?text=Hello%20there!" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-footer-widget applghu-footer-service">
-                        <h3>Service</h3>
-                        <div class="applghu-footer-service-link">
-                            <ul>
-                                <li><a href="#applghu-service">Structural Design</a></li>
-                                <li><a href="#applghu-service">Slabs and Flooring</a></li>
-                                <li><a href="#applghu-service">Staircases and Ramps</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#applghu-service">Foundation Work</a></li>
-                                <li><a href="#applghu-service">Beams and Columns</a></li>
-                                <li><a href="#applghu-service">Water Tanks and Reservoirs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="applghu-footer-widget applghu-footer-contact">
-                        <h3>Contact us</h3>
-                        <div class="applghu-footer-single-contact">
-                            <div class="applghu-footer-contact-icon-box">
-                                <i class="fa fa-address-card-o"></i>
-                            </div>
-                            <p>Datta Mandir, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057</p>
-                        </div>
-                        <div class="applghu-footer-single-contact">
-                            <div class="applghu-footer-contact-icon-box">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <p>
-                                <span>+91 869 897 5858</span>
-                            </p>
-                        </div>
-                        <div class="applghu-footer-single-contact">
-                            <div class="applghu-footer-contact-icon-box">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <p>
-                                sujitassociates@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="applghu-copyright-area">
-                        <div class="applghu-copyright-left">
-                            <p>Sujit Associate &copy; Copyright_2024
-                                <meta name="keywords" content="	accountant, advertising, advisor, agency, broker, business, clean, consulting, creative, elementor, finance, insurance, marketing, modern, portfolio">
-                            </p>
-                        </div>
-                        <ul class="applghu-copyright-right">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <div class="footer-bottom"><span>Sujit Associate · © <span id="year"></span></span><a href="#home">Back to top ↑</a></div>
         </div>
     </footer>
-    <!-- Footer End -->
+    <a class="back-top" id="back-top" href="#home" aria-label="Back to top">↑</a>
 
-    <!-- For Js Library -->
-
-
-    <script src="html.themexriver.com/Saasio/assets/js/jquery.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/bootstrap.min.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/owl.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/waypoints.min.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/wow.min.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/isotope.pkgd.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/appear.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/progress-bar-32.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/progress-bar.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/rbtools-32.min.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/rs6.min-32.js"></script>
-    <script src="html.themexriver.com/Saasio/assets/js/scripts-32.js"></script>
-    <script src="https://kit.fontawesome.com/be9e8e5a25.js" crossorigin="anonymous"></script>
-
+    <dialog class="equipment-dialog" id="equipment-dialog" aria-labelledby="equipment-title">
+        <div class="dialog-head"><h2 id="equipment-title">Our centring material</h2><button class="dialog-close" id="close-equipment" type="button" aria-label="Close equipment list">×</button></div>
+        <div class="equipment-grid" id="equipment-grid"></div>
+    </dialog>
 
     <script>
-        var revapi4,
-            tpj;
+        const header = document.getElementById("site-header");
+        const menuToggle = document.getElementById("menu-toggle");
+        const mainNav = document.getElementById("main-nav");
+        const backTop = document.getElementById("back-top");
 
-        function revinit_revslider41() {
-            jQuery(function() {
-                tpj = jQuery;
-                revapi4 = tpj("#rev_slider_4_1");
-                if (revapi4 == undefined || revapi4.revolution == undefined) {
-                    revslider_showDoubleJqueryError("rev_slider_4_1");
-                } else {
-                    revapi4.revolution({
-                        DPR: "dpr",
-                        sliderLayout: "fullwidth",
-                        visibilityLevels: "1240,1024,778,480",
-                        gridwidth: 1240,
-                        gridheight: 930,
-                        perspective: 600,
-                        perspectiveType: "global",
-                        editorheight: "930,768,960,720",
-                        responsiveLevels: "1240,1024,778,480",
-                        progressBar: {
-                            disableProgressBar: true
-                        },
-                        navigation: {
-                            wheelCallDelay: 1000,
-                            onHoverStop: false,
-                            arrows: {
-                                enable: true,
-                                tmp: "<div class=\"tp-title-wrap\">  	<div class=\"tp-arr-imgholder\"></div> </div>",
-                                style: "zeus",
-                                rtl: true,
-                                left: {
-                                    h_offset: 30
-                                },
-                                right: {
-                                    h_offset: 30
-                                }
-                            }
-                        },
-                        fallbacks: {
-                            allowHTML5AutoPlayOnAndroid: true
-                        },
-                    });
-                }
+        const updateScrollState = () => {
+            const scrolled = window.scrollY > 24;
+            header.classList.toggle("is-scrolled", scrolled);
+            backTop.classList.toggle("is-visible", window.scrollY > 500);
+        };
+        window.addEventListener("scroll", updateScrollState, { passive: true });
+        updateScrollState();
 
+        menuToggle.addEventListener("click", () => {
+            const open = menuToggle.getAttribute("aria-expanded") !== "true";
+            menuToggle.setAttribute("aria-expanded", String(open));
+            menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+            mainNav.classList.toggle("is-open", open);
+            document.body.classList.toggle("menu-open", open);
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                mainNav.classList.remove("is-open");
+                document.body.classList.remove("menu-open");
+                menuToggle.focus();
+            }
+        });
+        mainNav.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                mainNav.classList.remove("is-open");
+                document.body.classList.remove("menu-open");
+            }
+        });
+
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const projectCards = document.querySelectorAll(".project-card");
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const filter = button.dataset.filter;
+                filterButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+                projectCards.forEach((card) => {
+                    card.hidden = filter !== "all" && card.dataset.status !== filter;
+                });
             });
-        } // End of RevInitScript
-        var once_revslider41 = false;
-        if (document.readyState === "loading") {
-            document.addEventListener('readystatechange', function() {
-                if ((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider41) {
-                    once_revslider41 = true;
-                    revinit_revslider41();
-                }
-            });
+        });
+
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            if (!contactForm.reportValidity()) return;
+            const values = new FormData(contactForm);
+            const subject = encodeURIComponent(String(values.get("subject")));
+            const body = encodeURIComponent(
+                `Name: ${values.get("name")}\nPhone: ${values.get("phone") || "Not provided"}\nEmail: ${values.get("email")}\n\n${values.get("message")}`
+            );
+            window.location.href = `mailto:sujitassociates@gmail.com?subject=${subject}&body=${body}`;
+        });
+
+        const equipment = [
+            ["BAR BENDING MACHINE", "https://5.imimg.com/data5/SELLER/Default/2023/5/307375673/YA/XE/AY/1258844/spartan-sbm-55v-bar-bending-machines-500x500.png", "Efficiently bends steel bars for construction with precision."],
+            ["BAR CUTTING MACHINE", "https://5.imimg.com/data5/SELLER/Default/2022/10/LV/CJ/NR/141946453/bar-cutting-machine-500x500.jpg", "Cuts steel bars to precise lengths for reinforcement."],
+            ["CUPLOCK SCAFFOLDING", "https://images.jdmagicbox.com/quickquotes/images_main/mild-steel-red-color-vertical-standard-cuplock-scaffolding-pipe-3-meter-weight-13-7-kg-2222349926-x55594l3.jpg", "Available in sizes such as 1.5m, 2m and 2.5m for reliable support and safety."],
+            ["CONCRETE MIXER", "https://4.imimg.com/data4/YH/UT/MY-4587209/concrete-mixer.jpg", "Blends cement, water and aggregates for concrete."],
+            ["BASE PLATE", "https://www.grsscaffolding.com/images/product/base-plate.jpg", "Provides stable scaffolding support and load distribution."],
+            ["H FRAMES", "https://5.imimg.com/data5/SELLER/Default/2020/12/YK/GF/CK/2379454/h-frames-scaffolding.jpg", "Strong, stable support frames for construction."],
+            ["MS PROPS", "https://5.imimg.com/data5/NN/KK/MY-2/ms-scaffolding-prop-jpg-500x500.jpg", "Adjustable support for stability during construction."],
+            ["I CHANNEL", "https://bhagwatishuttering.com/wp-content/uploads/2020/06/steel_beams1.jpg", "Shuttering support for slabs during construction."],
+            ["MS PLATE", "https://5.imimg.com/data5/SELLER/Default/2021/12/EV/YY/LJ/120128070/mild-steel-shuttering-plate-500x500.jpeg", "High tensile strength plates for structural support."],
+            ["CONCRETE LIFT MACHINE", "https://hipat.in/wp-content/uploads/2023/01/Concrete-Lift-Machine.jpg", "Transfers concrete efficiently to higher levels."],
+            ["LEDGER SCAFFOLDING", "https://udemandme.com/wp-content/uploads/2020/09/a33544a_dx_0109_photo_3009.jpg", "Available in sizes such as 0.9m, 1.2m and 1.5m for support and stability."],
+            ["CONCRETE WEIGHT BATCHER", "https://img1.exportersindia.com/product_images/bc-small/2018/7/3463491/digital-scale-type-machine-1793475.jpg", "Measures concrete ingredients for accurate proportions."],
+            ["VIBRATOR MACHINE", "https://m.media-amazon.com/images/I/71UIpgz6GML.jpg", "Removes air pockets for a smooth concrete finish, with different needles for different applications."],
+            ["SQUARE TUBE", "https://www.jfeindia.com/img/cold-formed-sqaure-section-1.jpg", "Durable, precise support for slab formwork."],
+            ["ROUND TUBE", "https://cpimg.tistatic.com/08459626/b/4/Mild-Steel-Round-Tube.jpg", "Robust scaffolding support with effective load distribution."],
+            ["TIE ROD", "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Large/tie-rod-end-18-20-mm-size-16-mm20240108100257.jpg", "Stabilizes column shuttering and maintains alignment."],
+            ["WATERPROOF PLY", "https://5.imimg.com/data5/ANDROID/Default/2023/4/304298891/QO/YN/VV/24755526/product-jpeg-500x500.jpg", "Supports formwork during concrete casting."],
+            ["WOODEN PROPS", "https://5.imimg.com/data5/SELLER/Default/2021/12/FW/AQ/EW/22831734/shuttering-wooden-prop-rental-500x500.jpg", "Available in 8ft, 9ft and 10ft sizes to support formwork."]
+        ];
+        const equipmentGrid = document.getElementById("equipment-grid");
+        equipment.forEach(([name, image, description]) => {
+            const card = document.createElement("article");
+            card.className = "equipment-card";
+            const img = document.createElement("img");
+            img.src = image;
+            img.alt = name;
+            img.loading = "lazy";
+            const title = document.createElement("h3");
+            title.textContent = name;
+            const copy = document.createElement("p");
+            copy.textContent = description;
+            card.append(img, title, copy);
+            equipmentGrid.append(card);
+        });
+
+        const dialog = document.getElementById("equipment-dialog");
+        document.getElementById("open-equipment").addEventListener("click", () => dialog.showModal());
+        document.getElementById("close-equipment").addEventListener("click", () => dialog.close());
+        dialog.addEventListener("click", (event) => {
+            if (event.target === dialog) dialog.close();
+        });
+
+        const revealItems = document.querySelectorAll(".reveal");
+        if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const observer = new IntersectionObserver((entries, revealObserver) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revealItems.forEach((item) => observer.observe(item));
         } else {
-            once_revslider41 = true;
-            revinit_revslider41();
+            revealItems.forEach((item) => item.classList.add("is-visible"));
         }
+
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
