@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 56" role="img" aria-labelledby="title description">
+  <title id="title">Sujit Associate</title>
+  <desc id="description">Architectural frame emblem and Sujit Associate wordmark</desc>
+  <g fill="none" stroke="#20221f" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M12 47V18L29 7l17 11v29M20 47V23l9-6 9 6v24M29 17v30M12 31h34M12 39h34"/>
+  </g>
+  <path d="M9 50h40" stroke="#a95d30" stroke-width="2.7"/>
+  <text x="59" y="31" fill="#20221f" font-family="Georgia,serif" font-size="24" font-weight="700" letter-spacing="-0.8">Sujit</text>
+  <text x="60" y="45" fill="#20221f" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="2.2">ASSOCIATE</text>
+</svg>

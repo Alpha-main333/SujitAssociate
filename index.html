@@ -27,7 +27,7 @@
             "@type": "GeneralContractor",
             "name": "Sujit Associate",
             "description": "RCC construction, structural design, foundation and superstructure services in Pune and Pimpri-Chinchwad.",
-            "logo": "https://raw.githubusercontent.com/Alpha-main333/SujitAssociate/main/html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo.png",
+            "logo": "https://raw.githubusercontent.com/Alpha-main333/SujitAssociate/main/assets/images/sujit-associate-logo.svg",
             "telephone": "+91 869 897 5858",
             "email": "sujitassociates@gmail.com",
             "address": {
@@ -109,11 +109,11 @@
         .site-header { position: fixed; z-index: 20; inset: 0 0 auto; height: 88px; border-bottom: 1px solid rgba(255,255,255,.2); color: white; transition: height .25s ease, background .25s ease, box-shadow .25s ease, color .25s ease; }
         .site-header.is-scrolled { height: 74px; border-color: var(--line); background: rgba(255,255,255,.97); color: var(--ink); box-shadow: 0 8px 28px rgba(23,25,22,.07); }
         .header-inner { display: flex; height: 100%; align-items: center; justify-content: space-between; gap: 34px; }
-        .brand { display: flex; align-items: center; gap: 12px; color: inherit; white-space: nowrap; }
-        .brand-logo { display: block; width: 160px; height: 40px; object-fit: contain; }
-        .brand-logo--light { display: none; }
-        .site-header:not(.is-scrolled) .brand-logo--light { display: block; }
-        .site-header:not(.is-scrolled) .brand-logo--dark { display: none; }
+        .brand { display: inline-flex; align-items: center; gap: 10px; color: inherit; white-space: nowrap; }
+        .brand-mark { display: block; width: 36px; height: 36px; flex: 0 0 36px; color: var(--accent); }
+        .brand-type { display: grid; gap: 2px; }
+        .brand-name { font: 700 19px/.95 var(--serif); letter-spacing: -.035em; }
+        .brand-descriptor { font-size: 8px; font-weight: 700; letter-spacing: .2em; line-height: 1.2; }
         .main-nav { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 36px); }
         .main-nav a { position: relative; padding: 8px 0; font-size: 13px; font-weight: 600; }
         .main-nav a::after { position: absolute; right: 0; bottom: 2px; left: 0; height: 1px; background: var(--accent); content: ""; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
@@ -246,7 +246,8 @@
         .footer-links a:hover { color: #e2a77e; }
         .footer-bottom { display: flex; justify-content: space-between; gap: 16px; padding-top: 19px; border-top: 1px solid #494a44; color: #aeb0a9; font-size: 11px; }
         .footer-social { display: flex; gap: 18px; margin-top: 19px; color: #e2a77e; font-size: 12px; font-weight: 700; }
-        .footer-brand .brand-logo { width: 170px; }
+        .footer-brand .brand-mark { width: 39px; height: 39px; flex-basis: 39px; }
+        .footer-brand .brand-name { font-size: 21px; }
         .back-top { position: fixed; right: 20px; bottom: 20px; z-index: 10; display: grid; width: 42px; height: 42px; place-items: center; background: var(--ink); color: white; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s, transform .2s; }
         .back-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
@@ -320,7 +321,9 @@
             .site-header, .site-header.is-scrolled { height: 70px; border-color: rgba(255,255,255,.18); }
             .site-header.is-scrolled { border-color: var(--line); }
             .header-inner { gap: 14px; }
-            .brand-logo { width: 148px; }
+            .brand-mark { width: 32px; height: 32px; flex-basis: 32px; }
+            .brand-name { font-size: 17px; }
+            .brand-descriptor { font-size: 7px; }
             .menu-toggle { display: block; flex: 0 0 44px; }
             .main-nav { position: fixed; top: 70px; right: 0; left: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 9px 22px 19px; border-bottom: 1px solid var(--line); background: white; color: var(--ink); box-shadow: 0 15px 30px rgba(0,0,0,.1); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .2s, transform .2s; }
             .main-nav.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
@@ -399,8 +402,11 @@
     <header class="site-header" id="site-header">
         <div class="container header-inner">
             <a class="brand" href="#home" aria-label="Sujit Associate home">
-                <img class="brand-logo brand-logo--light" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo_1.png" alt="Sujit Associate">
-                <img class="brand-logo brand-logo--dark" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo.png" alt="Sujit Associate">
+                <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                    <path d="M7 34V13L20 5l13 8v21M13 34V17l7-4 7 4v17M20 13v21M7 22h26M7 28h26" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter"/>
+                    <path d="M5 35h30" stroke="var(--accent)" stroke-width="2.4"/>
+                </svg>
+                <span class="brand-type"><span class="brand-name">Sujit</span><span class="brand-descriptor">ASSOCIATE</span></span>
             </a>
             <nav class="main-nav" id="main-nav" aria-label="Main navigation">
                 <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#approach">Our approach</a><a href="#contact">Contact</a>
@@ -565,7 +571,13 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">
-                <div><a class="brand footer-brand" href="#home" aria-label="Sujit Associate home"><img class="brand-logo" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo_1.png" alt="Sujit Associate"></a><p class="footer-about">We build more than structures—we build trust, relationships and a better future.</p><div class="footer-social"><a href="https://www.instagram.com/sujit_bhanavase/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
+                <div><a class="brand footer-brand" href="#home" aria-label="Sujit Associate home">
+                    <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                        <path d="M7 34V13L20 5l13 8v21M13 34V17l7-4 7 4v17M20 13v21M7 22h26M7 28h26" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter"/>
+                        <path d="M5 35h30" stroke="var(--accent)" stroke-width="2.4"/>
+                    </svg>
+                    <span class="brand-type"><span class="brand-name">Sujit</span><span class="brand-descriptor">ASSOCIATE</span></span>
+                </a><p class="footer-about">We build more than structures—we build trust, relationships and a better future.</p><div class="footer-social"><a href="https://www.instagram.com/sujit_bhanavase/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
                 <div><h2 class="footer-heading">Explore</h2><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></nav></div>
                 <div><h2 class="footer-heading">Contact</h2><div class="footer-links"><a href="tel:+918698975858">+91 869 897 5858</a><a href="mailto:sujitassociates@gmail.com">sujitassociates@gmail.com</a><span>Datta Mandir, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057</span></div></div>
             </div>
