@@ -59,7 +59,7 @@
             }
         }
     </script>
-    <link rel="preconnect" href="https://formsubmit.co">
+    <link rel="preconnect" href="https://formspree.io">
     <style>
         @font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2") format("woff2"); }
         @font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2") format("woff2"); }
@@ -208,22 +208,25 @@
         .fact span { display: block; margin-top: 7px; color: var(--muted); font-size: 11px; line-height: 1.4; }
 
         .contact-section { background: var(--paper); }
-        .contact-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: 82px; align-items: start; }
+        .contact-grid { display: grid; grid-template-columns: minmax(0,.86fr) minmax(0,1.14fr); gap: 82px; align-items: start; }
+        .contact-grid > * { min-width: 0; }
         .contact-details { margin-top: 33px; border-top: 1px solid var(--line); }
         .contact-detail { padding: 18px 0; border-bottom: 1px solid var(--line); }
         .contact-detail span { display: block; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
         .contact-detail a, .contact-detail p { display: block; margin: 5px 0 0; font-size: 14px; font-weight: 600; }
-        .contact-form { padding: 32px; background: white; box-shadow: 0 18px 50px rgba(33,34,30,.06); }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-        .field { display: grid; gap: 7px; }
+        .contact-form { min-width: 0; padding: 32px; background: white; box-shadow: 0 18px 50px rgba(33,34,30,.06); }
+        .form-grid { display: grid; min-width: 0; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+        .field { display: grid; min-width: 0; gap: 7px; }
         .field--wide { grid-column: 1/-1; }
         .field label { font-size: 12px; font-weight: 700; }
-        .field input, .field textarea { width: 100%; min-height: 49px; padding: 12px 13px; border: 1px solid #deded8; border-radius: 0; background: #fff; color: var(--ink); }
+        .field input, .field textarea { width: 100%; min-width: 0; min-height: 49px; padding: 12px 13px; border: 1px solid #deded8; border-radius: 0; background: #fff; color: var(--ink); }
         .field textarea { min-height: 125px; resize: vertical; }
         .contact-form .button { margin-top: 20px; cursor: pointer; }
         .contact-form .button:disabled { cursor: wait; opacity: .7; }
         .form-note { margin: 12px 0 0; color: var(--muted); font-size: 11px; }
         .form-status { min-height: 1.5em; margin: 12px 0 0; color: var(--accent-dark); font-size: 13px; font-weight: 600; }
+        .form-status[data-state="error"] { color: #a4312b; }
+        .form-status[data-state="success"] { color: #356d45; }
         .form-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
         .privacy-consent { display: flex; align-items: flex-start; gap: 10px; margin-top: 17px; color: var(--muted); font-size: 12px; line-height: 1.5; }
         .privacy-consent input { flex: 0 0 auto; margin-top: 4px; accent-color: var(--accent-dark); }
@@ -304,6 +307,8 @@
             .main-nav { gap: 16px; }
             .header-call { display: none; }
             .about-grid, .quality-grid, .contact-grid { gap: 48px; }
+            .contact-grid { grid-template-columns: minmax(0,1fr); gap: 34px; }
+            .contact-form { width: 100%; max-width: 760px; }
             .about-photo { min-height: 470px; }
             .project-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-top { gap: 35px; }
@@ -349,6 +354,7 @@
             .contact-form { padding: 22px 18px; }
             .form-grid { grid-template-columns: 1fr; }
             .field--wide { grid-column: auto; }
+            .contact-form .button { width: 100%; }
             .map-wrap { height: 280px; margin-top: 42px; }
             .closing-inner { align-items: start; flex-direction: column; }
             .footer-top { grid-template-columns: 1fr 1fr; gap: 34px 24px; }
@@ -531,10 +537,9 @@
                             <div class="contact-detail"><span>Email</span><a href="mailto:sujitassociates@gmail.com">sujitassociates@gmail.com</a></div>
                         </div>
                     </div>
-                    <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/sujitassociates@gmail.com" data-ajax-action="https://formsubmit.co/ajax/sujitassociates@gmail.com" method="post">
+                    <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/mbgdrbly" method="post">
                         <input type="hidden" name="_subject" value="New project enquiry — Sujit Associate">
-                        <input type="hidden" name="_template" value="table">
-                        <div class="form-honeypot" aria-hidden="true"><label for="website">Leave this field blank</label><input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+                        <div class="form-honeypot" aria-hidden="true"><label for="website">Leave this field blank</label><input id="website" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
                         <div class="form-grid">
                             <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
                             <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
@@ -544,7 +549,7 @@
                         </div>
                         <label class="privacy-consent"><input type="checkbox" name="privacy_consent" value="yes" required><span>I agree to the <a href="privacy.html">Privacy Notice</a> and the processing of my enquiry to respond to my request.</span></label>
                         <button class="button" type="submit">Send project enquiry <span class="arrow" aria-hidden="true">→</span></button>
-                        <p class="form-note">Your enquiry is sent securely to Sujit Associate using FormSubmit. A spam-protection challenge may appear.</p>
+                        <p class="form-note">Your enquiry will be sent to Sujit Associate via Formspree. We’ll use your details only to respond.</p>
                         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
@@ -651,24 +656,40 @@
             const submitButton = contactForm.querySelector('button[type="submit"]');
             const formStatus = document.getElementById("form-status");
             submitButton.disabled = true;
+            contactForm.setAttribute("aria-busy", "true");
+            formStatus.dataset.state = "";
             formStatus.textContent = "Sending your enquiry…";
             try {
-                const response = await fetch(contactForm.dataset.ajaxAction, {
+                const response = await fetch(contactForm.action, {
                     method: "POST",
                     headers: { Accept: "application/json" },
-                    body: new URLSearchParams(new FormData(contactForm))
+                    body: new FormData(contactForm)
                 });
-                const result = await response.json();
-                if (!response.ok || (result.success !== true && result.success !== "true")) {
-                    throw new Error(result.message || "The enquiry service rejected the request.");
+                const responseText = await response.text();
+                let result = {};
+                if (responseText) {
+                    try {
+                        result = JSON.parse(responseText);
+                    } catch (error) {
+                        if (response.ok) throw new Error("The enquiry service returned an unreadable response.");
+                    }
+                }
+                if (!response.ok) {
+                    const fieldErrors = Array.isArray(result.errors)
+                        ? result.errors.map((item) => item.message).filter(Boolean).join(" ")
+                        : "";
+                    throw new Error(fieldErrors || result.error || "The enquiry service could not accept the submission.");
                 }
                 contactForm.reset();
+                formStatus.dataset.state = "success";
                 formStatus.textContent = "Thank you. Your enquiry has been sent to Sujit Associate.";
             } catch (error) {
                 console.error("Unable to send the project enquiry.", error);
-                formStatus.textContent = "We couldn't send your enquiry. Please email sujitassociates@gmail.com or call +91 869 897 5858.";
+                formStatus.dataset.state = "error";
+                formStatus.textContent = "We couldn't send your enquiry. Please try again or email sujitassociates@gmail.com.";
             } finally {
                 submitButton.disabled = false;
+                contactForm.removeAttribute("aria-busy");
             }
         });
 
