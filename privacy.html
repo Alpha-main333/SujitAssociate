@@ -17,7 +17,11 @@
         body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.7 "Roboto", Arial, sans-serif; }
         a { color: var(--accent); text-underline-offset: 3px; }
         .header { display: flex; min-height: 82px; align-items: center; justify-content: space-between; gap: 20px; padding: 15px max(24px, calc((100vw - 1080px)/2)); border-bottom: 1px solid var(--line); background: white; }
-        .logo { display: block; width: 160px; height: 40px; object-fit: contain; }
+        .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+        .brand-mark { display: block; width: 36px; height: 36px; flex: 0 0 36px; color: var(--accent); }
+        .brand-type { display: grid; gap: 2px; }
+        .brand-name { font: 700 19px/.95 "Poppins", sans-serif; letter-spacing: -.045em; }
+        .brand-descriptor { font-size: 8px; font-weight: 700; letter-spacing: .2em; line-height: 1.2; }
         .back { font-size: 13px; font-weight: 700; }
         main { width: min(760px, calc(100% - 40px)); margin: 70px auto 100px; padding: clamp(26px, 6vw, 64px); background: white; }
         .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
@@ -32,12 +36,18 @@
         li + li { margin-top: 7px; }
         .contact { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 15px; }
         .footer { padding: 22px; color: var(--muted); text-align: center; font-size: 12px; }
-        @media (max-width: 500px) { .header { min-height: 70px; padding-inline: 16px; } .logo { width: 140px; } main { width: calc(100% - 24px); margin: 22px auto 50px; padding: 24px 19px; } }
+        @media (max-width: 500px) { .header { min-height: 70px; padding-inline: 16px; } .brand-mark { width: 32px; height: 32px; flex-basis: 32px; } .brand-name { font-size: 17px; } .brand-descriptor { font-size: 7px; } main { width: calc(100% - 24px); margin: 22px auto 50px; padding: 24px 19px; } }
     </style>
 </head>
 <body>
     <header class="header">
-        <a href="index.html" aria-label="Sujit Associate home"><img class="logo" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo.png" alt="Sujit Associate"></a>
+        <a class="brand" href="index.html" aria-label="Sujit Associate home">
+            <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M7 34V13L20 5l13 8v21M13 34V17l7-4 7 4v17M20 13v21M7 22h26M7 28h26" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter"/>
+                <path d="M5 35h30" stroke="var(--accent)" stroke-width="2.4"/>
+            </svg>
+            <span class="brand-type"><span class="brand-name">Sujit</span><span class="brand-descriptor">ASSOCIATE</span></span>
+        </a>
         <a class="back" href="index.html">Back to website</a>
     </header>
     <main>
@@ -52,7 +62,8 @@
 
         <section>
             <h2>How enquiries are handled</h2>
-            <p>The contact form sends the details you submit to Sujit Associate using FormSubmit so the business can respond to your enquiry. The website itself does not operate a separate enquiry database. FormSubmit states in its <a href="https://formsubmit.co/documentation" target="_blank" rel="noopener noreferrer">documentation</a> that submissions are retained in its archive for 30 days. Its spam protection may present a CAPTCHA.</p>
+            <p>The contact form sends the details you submit to Sujit Associate through Formspree so the business can respond to your enquiry. Formspree processes submissions and sends email notifications. The website itself does not operate a separate enquiry database. For information about Formspree’s handling of personal information, see its <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
+            <p>Information submitted through the form is also subject to Formspree’s privacy terms and processing practices. The service may process information outside your country. Please review the linked privacy policy for details.</p>
             <p>If you prefer not to use the form, contact Sujit Associate directly by phone or email using the details on the <a href="index.html#contact">contact section</a>.</p>
         </section>
 
@@ -63,7 +74,7 @@
 
         <section>
             <h2>Storage and your choices</h2>
-            <p>This website does not add analytics or advertising tracking. FormSubmit’s spam-protection CAPTCHA and the embedded map are operated by third parties and may use their own technologies. You can avoid the form and map and contact the business directly instead.</p>
+            <p>This website does not add analytics or advertising tracking. Formspree and the embedded Google Map are operated by third parties and may use their own technologies. You can avoid the form and map and contact the business directly instead.</p>
             <p>For a question about an enquiry you submitted, or to request correction or deletion, contact Sujit Associate. Requests may be subject to applicable legal and operational requirements.</p>
             <div class="contact">
                 <a href="mailto:sujitassociates@gmail.com">sujitassociates@gmail.com</a>
