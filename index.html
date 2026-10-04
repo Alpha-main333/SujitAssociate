@@ -90,6 +90,7 @@
         button, input, textarea { font: inherit; }
         button, a { -webkit-tap-highlight-color: transparent; }
         button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #d99b6f; outline-offset: 3px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
         .container { width: min(var(--wrap), calc(100% - 48px)); margin-inline: auto; }
         .skip-link { position: fixed; top: 8px; left: 8px; z-index: 50; padding: 10px 14px; background: white; color: var(--ink); transform: translateY(-150%); }
         .skip-link:focus { transform: translateY(0); }
@@ -246,16 +247,53 @@
         .back-top { position: fixed; right: 20px; bottom: 20px; z-index: 10; display: grid; width: 42px; height: 42px; place-items: center; background: var(--ink); color: white; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s, transform .2s; }
         .back-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
-        .equipment-dialog { width: min(940px, calc(100% - 32px)); max-height: min(88vh, 850px); padding: 0; border: 0; background: white; color: var(--ink); box-shadow: 0 25px 90px rgba(0,0,0,.35); }
-        .equipment-dialog::backdrop { background: rgba(20,21,19,.72); }
-        .dialog-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; padding: 19px 24px; border-bottom: 1px solid var(--line); background: white; }
-        .dialog-head h2 { margin: 0; font: 700 21px var(--serif); }
-        .dialog-close { width: 38px; height: 38px; border: 1px solid var(--line); background: white; color: var(--ink); font-size: 23px; cursor: pointer; }
-        .equipment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 22px; overflow-y: auto; }
-        .equipment-card { border: 1px solid var(--line); }
-        .equipment-card img { width: 100%; height: 150px; object-fit: cover; background: var(--paper); }
-        .equipment-card h3 { margin: 12px 13px 5px; font: 700 12px var(--serif); }
-        .equipment-card p { margin: 0; padding: 0 13px 14px; color: var(--muted); font-size: 11px; line-height: 1.55; }
+        .equipment-dialog { display: none; grid-template-rows: auto auto minmax(0, 1fr); width: min(1120px, calc(100% - 40px)); height: min(900px, 90vh); height: min(900px, 90dvh); max-height: 90vh; max-height: 90dvh; padding: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.18); background: var(--paper); color: var(--ink); box-shadow: 0 32px 100px rgba(0,0,0,.35); }
+        .equipment-dialog[open] { display: grid; animation: catalog-enter .24s cubic-bezier(.2,.7,.3,1) both; }
+        .equipment-dialog::backdrop { background: rgba(20,21,19,.74); backdrop-filter: blur(4px); }
+        @keyframes catalog-enter { from { opacity: 0; transform: translateY(10px) scale(.99); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 30px 36px 24px; border-bottom: 1px solid var(--line); background: white; }
+        .dialog-kicker { margin: 0 0 7px; color: var(--accent-dark); font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+        .dialog-head h2 { margin: 0; font: 700 clamp(24px, 3.3vw, 37px)/1.12 var(--serif); letter-spacing: -.05em; }
+        .dialog-description { max-width: 660px; margin: 9px 0 0; color: var(--muted); font-size: 13px; }
+        .dialog-close { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border: 1px solid var(--line); background: white; color: var(--ink); font-size: 24px; line-height: 1; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
+        .dialog-close:hover { border-color: var(--ink); background: var(--ink); color: white; }
+        .equipment-toolbar { display: grid; grid-template-columns: minmax(0,1fr) minmax(210px,280px); align-items: center; gap: 14px 24px; padding: 17px 36px; border-bottom: 1px solid var(--line); background: white; }
+        .equipment-filters { display: flex; flex-wrap: wrap; gap: 7px; }
+        .equipment-filter { min-height: 38px; padding: 0 13px; border: 1px solid transparent; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer; transition: border-color .18s, background .18s, color .18s; }
+        .equipment-filter:hover { border-color: var(--line); color: var(--ink); }
+        .equipment-filter[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: white; }
+        .equipment-filter-count { margin-left: 5px; color: inherit; font-size: 10px; opacity: .7; }
+        .equipment-search { position: relative; }
+        .equipment-search::before { position: absolute; top: 50%; left: 13px; color: var(--muted); content: "⌕"; font-size: 21px; line-height: 1; transform: translateY(-56%); pointer-events: none; }
+        .equipment-search input { width: 100%; height: 42px; padding: 0 13px 0 39px; border: 1px solid var(--line); border-radius: 0; background: var(--paper); color: var(--ink); font: 13px var(--body); }
+        .equipment-search input::placeholder { color: #83847e; }
+        .equipment-search input:focus { border-color: var(--accent); outline: 2px solid rgba(199,124,73,.2); outline-offset: 1px; }
+        .equipment-results { display: flex; align-items: center; justify-content: space-between; gap: 8px 14px; min-height: 43px; padding: 0 36px; color: var(--muted); font-size: 11px; }
+        .equipment-results strong { color: var(--ink); font-weight: 700; }
+        .equipment-results-note { color: var(--muted); }
+        .equipment-body { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: #b7b4ac transparent; scrollbar-width: thin; }
+        .equipment-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); align-content: start; gap: 16px; padding: 0 36px 34px; }
+        .equipment-card { min-width: 0; overflow: hidden; border: 1px solid #e2e1da; background: white; transition: border-color .22s, box-shadow .22s, transform .22s; }
+        .equipment-card[hidden] { display: none; }
+        .equipment-card:hover { transform: translateY(-3px); border-color: #cfb19a; box-shadow: 0 13px 28px rgba(32,34,31,.09); }
+        .equipment-photo { position: relative; display: grid; height: 176px; place-items: center; overflow: hidden; border-bottom: 1px solid #ecebe6; background: #eeede8; }
+        .equipment-photo::before, .equipment-photo::after { position: absolute; z-index: 0; background: rgba(38,40,35,.07); content: ""; pointer-events: none; }
+        .equipment-photo::before { top: 0; bottom: 0; left: 50%; width: 1px; }
+        .equipment-photo::after { top: 50%; right: 0; left: 0; height: 1px; }
+        .equipment-photo img { position: relative; z-index: 1; width: calc(100% - 36px); height: calc(100% - 32px); object-fit: contain; mix-blend-mode: multiply; transition: transform .35s cubic-bezier(.2,.65,.3,1); }
+        .equipment-card:hover .equipment-photo img { transform: scale(1.055); }
+        .equipment-number { position: absolute; top: 12px; left: 13px; z-index: 2; color: #77776f; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+        .equipment-category { position: absolute; right: 11px; bottom: 11px; z-index: 2; padding: 5px 8px; border: 1px solid rgba(32,34,31,.1); background: rgba(255,255,255,.92); color: #55574f; font-size: 8px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+        .equipment-card-copy { min-height: 108px; padding: 16px 17px 17px; }
+        .equipment-card h3 { margin: 0; font: 700 14px/1.35 var(--serif); letter-spacing: -.02em; overflow-wrap: anywhere; }
+        .equipment-card p { margin: 7px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+        .equipment-empty { display: none; grid-column: 1/-1; padding: 68px 20px 82px; text-align: center; }
+        .equipment-empty.is-visible { display: block; }
+        .equipment-empty-mark { display: grid; width: 52px; height: 52px; margin: 0 auto 17px; place-items: center; border: 1px solid var(--line); color: var(--accent-dark); font-size: 22px; }
+        .equipment-empty h3 { margin: 0; font: 700 20px var(--serif); letter-spacing: -.035em; }
+        .equipment-empty p { margin: 7px 0 17px; color: var(--muted); font-size: 13px; }
+        .equipment-reset { padding: 9px 13px; border: 1px solid var(--line); background: white; color: var(--ink); font-size: 12px; font-weight: 700; cursor: pointer; }
+        .equipment-reset:hover { border-color: var(--ink); background: var(--ink); color: white; }
         .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.65,.3,1); }
         .reveal.is-visible { opacity: 1; transform: translateY(0); }
         @media (prefers-reduced-motion: reduce) {
@@ -316,15 +354,37 @@
             .footer-top { grid-template-columns: 1fr 1fr; gap: 34px 24px; }
             .footer-top > :first-child { grid-column: 1/-1; }
             .footer-bottom { flex-direction: column; }
-            .equipment-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 13px; }
-            .equipment-card img { height: 115px; }
+            .equipment-dialog { width: calc(100% - 24px); height: calc(100vh - 24px); height: calc(100dvh - 24px); max-height: none; }
+            .dialog-head { padding: 22px 21px 18px; }
+            .dialog-description { max-width: 440px; font-size: 12px; }
+            .dialog-close { width: 38px; height: 38px; flex-basis: 38px; }
+            .equipment-toolbar { grid-template-columns: 1fr; gap: 10px; padding: 13px 20px; }
+            .equipment-filters { gap: 3px; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; scrollbar-width: none; }
+            .equipment-filters::-webkit-scrollbar { display: none; }
+            .equipment-filter { min-height: 35px; flex: 0 0 auto; padding-inline: 10px; font-size: 11px; }
+            .equipment-search input { height: 40px; }
+            .equipment-results { min-height: 38px; flex-wrap: wrap; padding-inline: 21px; }
+            .equipment-results-note { display: none; }
+            .equipment-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 11px; padding: 0 20px 23px; }
+            .equipment-photo { height: clamp(105px, 24vw, 150px); }
+            .equipment-photo img { width: calc(100% - 22px); height: calc(100% - 22px); }
+            .equipment-card-copy { min-height: 106px; padding: 12px; }
+            .equipment-card h3 { font-size: 12px; }
+            .equipment-card p { font-size: 10px; }
+            .equipment-number { top: 8px; left: 9px; }
+            .equipment-category { right: 7px; bottom: 7px; padding: 4px 6px; font-size: 7px; }
         }
         @media (max-width: 370px) {
             .container { width: calc(100% - 28px); }
             .hero h1 { font-size: 45px; }
             .hero-actions { align-items: stretch; flex-direction: column; }
             .button { width: 100%; }
-            .equipment-grid { grid-template-columns: 1fr; }
+            .dialog-head { gap: 12px; padding-inline: 16px; }
+            .dialog-description { max-width: 240px; font-size: 11px; }
+            .equipment-toolbar { padding-inline: 14px; }
+            .equipment-results { padding-inline: 16px; }
+            .equipment-grid { gap: 9px; padding-inline: 14px; }
+            .equipment-card-copy { padding: 10px; }
         }
     </style>
 </head>
@@ -443,7 +503,7 @@
 
         <section class="section" id="why-us">
             <div class="container quality-grid">
-                <div class="reveal"><p class="eyebrow">Resources &amp; quality assurance</p><h2 class="section-title">The right people, tools and attention on site.</h2><p class="section-copy">A dedicated team, careful checks and construction resources support every project from the ground up.</p><div class="resource-panel"><div><strong>Our centring material</strong><span>Explore equipment and site resources</span></div><button class="text-button" id="open-equipment" type="button">View equipment ↗</button></div></div>
+                <div class="reveal"><p class="eyebrow">Resources &amp; quality assurance</p><h2 class="section-title">The right people, tools and attention on site.</h2><p class="section-copy">A dedicated team, careful checks and construction resources support every project from the ground up.</p><div class="resource-panel"><div><strong>Our centring material</strong><span>Explore equipment and site resources</span></div><button class="text-button" id="open-equipment" type="button">Browse 18 equipment items ↗</button></div></div>
                 <div class="reveal">
                     <div class="quality-list">
                         <article class="quality-item"><b>01</b><div><h3>Quick response</h3><p>We understand the importance of timely communication.</p></div></article>
@@ -509,9 +569,28 @@
     </footer>
     <a class="back-top" id="back-top" href="#home" aria-label="Back to top">↑</a>
 
-    <dialog class="equipment-dialog" id="equipment-dialog" aria-labelledby="equipment-title">
-        <div class="dialog-head"><h2 id="equipment-title">Our centring material</h2><button class="dialog-close" id="close-equipment" type="button" aria-label="Close equipment list">×</button></div>
-        <div class="equipment-grid" id="equipment-grid"></div>
+    <dialog class="equipment-dialog" id="equipment-dialog" aria-labelledby="equipment-title" aria-describedby="equipment-description">
+        <div class="dialog-head">
+            <div>
+                <p class="dialog-kicker">Site resources / equipment</p>
+                <h2 id="equipment-title">Tools for the work.</h2>
+                <p class="dialog-description" id="equipment-description">Browse the machinery, scaffolding and centring materials used to support construction on site.</p>
+            </div>
+            <button class="dialog-close" id="close-equipment" type="button" aria-label="Close equipment catalog">×</button>
+        </div>
+        <div class="equipment-toolbar">
+            <div class="equipment-filters" id="equipment-filters" role="group" aria-label="Filter equipment by category">
+                <button class="equipment-filter" type="button" data-equipment-filter="all" aria-pressed="true" aria-controls="equipment-grid">All equipment <span class="equipment-filter-count" data-category-count="all"></span></button>
+                <button class="equipment-filter" type="button" data-equipment-filter="Machinery" aria-pressed="false" aria-controls="equipment-grid">Machinery <span class="equipment-filter-count" data-category-count="Machinery"></span></button>
+                <button class="equipment-filter" type="button" data-equipment-filter="Scaffolding" aria-pressed="false" aria-controls="equipment-grid">Scaffolding <span class="equipment-filter-count" data-category-count="Scaffolding"></span></button>
+                <button class="equipment-filter" type="button" data-equipment-filter="Formwork" aria-pressed="false" aria-controls="equipment-grid">Formwork <span class="equipment-filter-count" data-category-count="Formwork"></span></button>
+            </div>
+            <label class="equipment-search"><span class="sr-only">Search equipment</span><input id="equipment-search" type="search" placeholder="Search equipment..." autocomplete="off" aria-controls="equipment-grid"></label>
+        </div>
+        <div class="equipment-body">
+            <div class="equipment-results"><span id="equipment-result-count" role="status" aria-live="polite"></span><span class="equipment-results-note">Centring materials &amp; site machinery</span></div>
+            <div class="equipment-grid" id="equipment-grid" role="region" aria-label="Construction equipment and centring material"></div>
+        </div>
     </dialog>
 
     <script>
@@ -594,40 +673,120 @@
         });
 
         const equipment = [
-            ["BAR BENDING MACHINE", "assets/images/equipment/01-bar-bending-machine.jpg", "Efficiently bends steel bars for construction with precision."],
-            ["BAR CUTTING MACHINE", "assets/images/equipment/02-bar-cutting-machine.jpg", "Cuts steel bars to precise lengths for reinforcement."],
-            ["CUPLOCK SCAFFOLDING", "assets/images/equipment/03-cuplock-scaffolding.jpg", "Available in sizes such as 1.5m, 2m and 2.5m for reliable support and safety."],
-            ["CONCRETE MIXER", "assets/images/equipment/04-concrete-mixer.jpg", "Blends cement, water and aggregates for concrete."],
-            ["BASE PLATE", "assets/images/equipment/05-base-plate.jpg", "Provides stable scaffolding support and load distribution."],
-            ["H FRAMES", "assets/images/equipment/06-h-frames.jpg", "Strong, stable support frames for construction."],
-            ["MS PROPS", "assets/images/equipment/07-ms-props.jpg", "Adjustable support for stability during construction."],
-            ["I CHANNEL", "assets/images/equipment/08-i-channel.jpg", "Shuttering support for slabs during construction."],
-            ["MS PLATE", "assets/images/equipment/09-ms-plate.jpg", "High tensile strength plates for structural support."],
-            ["CONCRETE LIFT MACHINE", "assets/images/equipment/10-concrete-lift-machine.jpg", "Transfers concrete efficiently to higher levels."],
-            ["LEDGER SCAFFOLDING", "assets/images/equipment/11-ledger-scaffolding.jpg", "Available in sizes such as 0.9m, 1.2m and 1.5m for support and stability."],
-            ["CONCRETE WEIGHT BATCHER", "assets/images/equipment/12-concrete-weight-batcher.jpg", "Measures concrete ingredients for accurate proportions."],
-            ["VIBRATOR MACHINE", "assets/images/equipment/13-vibrator-machine.jpg", "Removes air pockets for a smooth concrete finish, with different needles for different applications."],
-            ["SQUARE TUBE", "assets/images/equipment/14-square-tube.jpg", "Durable, precise support for slab formwork."],
-            ["ROUND TUBE", "assets/images/equipment/15-round-tube.jpg", "Robust scaffolding support with effective load distribution."],
-            ["TIE ROD", "assets/images/equipment/16-tie-rod.jpg", "Stabilizes column shuttering and maintains alignment."],
-            ["WATERPROOF PLY", "assets/images/equipment/17-waterproof-ply.jpg", "Supports formwork during concrete casting."],
-            ["WOODEN PROPS", "assets/images/equipment/18-wooden-props.jpg", "Available in 8ft, 9ft and 10ft sizes to support formwork."]
+            ["BAR BENDING MACHINE", "assets/images/equipment/01-bar-bending-machine.jpg", "Efficiently bends steel bars for construction with precision.", "Machinery"],
+            ["BAR CUTTING MACHINE", "assets/images/equipment/02-bar-cutting-machine.jpg", "Cuts steel bars to precise lengths for reinforcement.", "Machinery"],
+            ["CUPLOCK SCAFFOLDING", "assets/images/equipment/03-cuplock-scaffolding.jpg", "Available in sizes such as 1.5m, 2m and 2.5m for reliable support and safety.", "Scaffolding"],
+            ["CONCRETE MIXER", "assets/images/equipment/04-concrete-mixer.jpg", "Blends cement, water and aggregates for concrete.", "Machinery"],
+            ["BASE PLATE", "assets/images/equipment/05-base-plate.jpg", "Provides stable scaffolding support and load distribution.", "Scaffolding"],
+            ["H FRAMES", "assets/images/equipment/06-h-frames.jpg", "Strong, stable support frames for construction.", "Scaffolding"],
+            ["MS PROPS", "assets/images/equipment/07-ms-props.jpg", "Adjustable support for stability during construction.", "Scaffolding"],
+            ["I CHANNEL", "assets/images/equipment/08-i-channel.jpg", "Shuttering support for slabs during construction.", "Formwork"],
+            ["MS PLATE", "assets/images/equipment/09-ms-plate.jpg", "High tensile strength plates for structural support.", "Formwork"],
+            ["CONCRETE LIFT MACHINE", "assets/images/equipment/10-concrete-lift-machine.jpg", "Transfers concrete efficiently to higher levels.", "Machinery"],
+            ["LEDGER SCAFFOLDING", "assets/images/equipment/11-ledger-scaffolding.jpg", "Available in sizes such as 0.9m, 1.2m and 1.5m for support and stability.", "Scaffolding"],
+            ["CONCRETE WEIGHT BATCHER", "assets/images/equipment/12-concrete-weight-batcher.jpg", "Measures concrete ingredients for accurate proportions.", "Machinery"],
+            ["VIBRATOR MACHINE", "assets/images/equipment/13-vibrator-machine.jpg", "Removes air pockets for a smooth concrete finish, with different needles for different applications.", "Machinery"],
+            ["SQUARE TUBE", "assets/images/equipment/14-square-tube.jpg", "Durable, precise support for slab formwork.", "Formwork"],
+            ["ROUND TUBE", "assets/images/equipment/15-round-tube.jpg", "Robust scaffolding support with effective load distribution.", "Formwork"],
+            ["TIE ROD", "assets/images/equipment/16-tie-rod.jpg", "Stabilizes column shuttering and maintains alignment.", "Formwork"],
+            ["WATERPROOF PLY", "assets/images/equipment/17-waterproof-ply.jpg", "Supports formwork during concrete casting.", "Formwork"],
+            ["WOODEN PROPS", "assets/images/equipment/18-wooden-props.jpg", "Available in 8ft, 9ft and 10ft sizes to support formwork.", "Formwork"]
         ];
         const equipmentGrid = document.getElementById("equipment-grid");
-        equipment.forEach(([name, image, description]) => {
+        const equipmentSearch = document.getElementById("equipment-search");
+        const equipmentResultCount = document.getElementById("equipment-result-count");
+        const equipmentFilters = document.getElementById("equipment-filters");
+        const equipmentFilterButtons = equipmentFilters.querySelectorAll("[data-equipment-filter]");
+        const equipmentCards = [];
+        const equipmentCategoryCount = (category) => equipment.filter((item) => category === "all" || item[3] === category).length;
+
+        equipmentFilterButtons.forEach((button) => {
+            const count = document.querySelector(`[data-category-count="${button.dataset.equipmentFilter}"]`);
+            count.textContent = equipmentCategoryCount(button.dataset.equipmentFilter);
+        });
+
+        equipment.forEach(([name, image, description, category], index) => {
             const card = document.createElement("article");
             card.className = "equipment-card";
+            card.setAttribute("aria-label", `${name}, ${category}`);
+            card.dataset.category = category;
+            card.dataset.search = `${name} ${description} ${category}`.toLowerCase();
+            const photo = document.createElement("div");
+            photo.className = "equipment-photo";
+            const number = document.createElement("span");
+            number.className = "equipment-number";
+            number.textContent = `ITEM / ${String(index + 1).padStart(2, "0")}`;
             const img = document.createElement("img");
             img.src = image;
             img.alt = name;
             img.loading = "lazy";
+            img.decoding = "async";
+            const categoryLabel = document.createElement("span");
+            categoryLabel.className = "equipment-category";
+            categoryLabel.textContent = category;
+            photo.append(number, img, categoryLabel);
+            const content = document.createElement("div");
+            content.className = "equipment-card-copy";
             const title = document.createElement("h3");
             title.textContent = name;
             const copy = document.createElement("p");
             copy.textContent = description;
-            card.append(img, title, copy);
+            content.append(title, copy);
+            card.append(photo, content);
             equipmentGrid.append(card);
+            equipmentCards.push(card);
         });
+
+        const emptyState = document.createElement("div");
+        emptyState.className = "equipment-empty";
+        const emptyMark = document.createElement("span");
+        emptyMark.className = "equipment-empty-mark";
+        emptyMark.setAttribute("aria-hidden", "true");
+        emptyMark.textContent = "⌕";
+        const emptyTitle = document.createElement("h3");
+        emptyTitle.textContent = "No equipment found";
+        const emptyCopy = document.createElement("p");
+        emptyCopy.textContent = "Try another search or browse a different category.";
+        const resetEquipment = document.createElement("button");
+        resetEquipment.className = "equipment-reset";
+        resetEquipment.type = "button";
+        resetEquipment.textContent = "Show all equipment";
+        emptyState.append(emptyMark, emptyTitle, emptyCopy, resetEquipment);
+        equipmentGrid.append(emptyState);
+
+        let activeEquipmentCategory = "all";
+        const updateEquipmentCatalog = () => {
+            const query = equipmentSearch.value.trim().toLowerCase();
+            let visibleCount = 0;
+            equipmentCards.forEach((card) => {
+                const matchesCategory = activeEquipmentCategory === "all" || card.dataset.category === activeEquipmentCategory;
+                const matchesSearch = !query || card.dataset.search.includes(query);
+                card.hidden = !matchesCategory || !matchesSearch;
+                if (!card.hidden) visibleCount += 1;
+            });
+            emptyState.classList.toggle("is-visible", visibleCount === 0);
+            equipmentResultCount.textContent = `Showing ${visibleCount} of ${equipment.length} ${equipment.length === 1 ? "item" : "items"}`;
+        };
+        equipmentFilters.addEventListener("click", (event) => {
+            const button = event.target.closest("[data-equipment-filter]");
+            if (!button) return;
+            activeEquipmentCategory = button.dataset.equipmentFilter;
+            equipmentFilterButtons.forEach((filter) => {
+                filter.setAttribute("aria-pressed", String(filter === button));
+            });
+            updateEquipmentCatalog();
+        });
+        equipmentSearch.addEventListener("input", updateEquipmentCatalog);
+        resetEquipment.addEventListener("click", () => {
+            equipmentSearch.value = "";
+            activeEquipmentCategory = "all";
+            equipmentFilterButtons.forEach((filter) => {
+                filter.setAttribute("aria-pressed", String(filter.dataset.equipmentFilter === "all"));
+            });
+            updateEquipmentCatalog();
+            equipmentSearch.focus();
+        });
+        updateEquipmentCatalog();
 
         const dialog = document.getElementById("equipment-dialog");
         document.getElementById("open-equipment").addEventListener("click", () => dialog.showModal());
