@@ -6,7 +6,60 @@
     <meta name="theme-color" content="#20221f">
     <meta name="description" content="Sujit Associate delivers RCC construction, structural design, foundation and superstructure services across Pune and Pimpri-Chinchwad.">
     <title>Sujit Associate | RCC Construction & Structural Work</title>
-    <link rel="icon" href="html.themexriver.com/Saasio/assets/img/fv.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="image" href="assets/images/projects/01-24-life-exotica-residential-project.jpg" fetchpriority="high">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sujit Associate">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Sujit Associate | RCC Construction & Structural Work">
+    <meta property="og:description" content="RCC construction and structural work, delivered with care, precision and 30 years of expertise in Pune.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Alpha-main333/SujitAssociate/main/assets/images/sujit-associate-social.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Sujit Associate construction project in Pune">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sujit Associate | RCC Construction & Structural Work">
+    <meta name="twitter:description" content="RCC construction and structural work in Pune, Maharashtra.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Alpha-main333/SujitAssociate/main/assets/images/sujit-associate-social.jpg">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "GeneralContractor",
+            "name": "Sujit Associate",
+            "description": "RCC construction, structural design, foundation and superstructure services in Pune and Pimpri-Chinchwad.",
+            "logo": "https://raw.githubusercontent.com/Alpha-main333/SujitAssociate/main/html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo.png",
+            "telephone": "+91 869 897 5858",
+            "email": "sujitassociates@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Wakad Road, 4/1/0458, Datta Mandir, Shankar Kalat Nagar, Wakad",
+                "addressLocality": "Pimpri-Chinchwad",
+                "addressRegion": "Maharashtra",
+                "postalCode": "411057",
+                "addressCountry": "IN"
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": "Pune"
+            },
+            "sameAs": [
+                "https://www.instagram.com/sujit_bhanavase/"
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Construction services",
+                "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Structural Design" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Foundation Work" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Slabs and Flooring" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beams and Columns" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Staircases and Ramps" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Tanks and Reservoirs" } }
+                ]
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://formsubmit.co">
     <style>
         @font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2") format("woff2"); }
         @font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2") format("woff2"); }
@@ -56,22 +109,23 @@
         .site-header.is-scrolled { height: 74px; border-color: var(--line); background: rgba(255,255,255,.97); color: var(--ink); box-shadow: 0 8px 28px rgba(23,25,22,.07); }
         .header-inner { display: flex; height: 100%; align-items: center; justify-content: space-between; gap: 34px; }
         .brand { display: flex; align-items: center; gap: 12px; color: inherit; white-space: nowrap; }
-        .brand-mark { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid var(--accent); color: var(--accent); font: 800 18px var(--serif); }
-        .brand-name { display: block; font: 800 16px/1.1 var(--serif); letter-spacing: -.04em; }
-        .brand-caption { display: block; margin-top: 4px; color: currentColor; font-size: 9px; font-weight: 600; letter-spacing: .19em; opacity: .72; text-transform: uppercase; }
+        .brand-logo { display: block; width: 160px; height: 40px; object-fit: contain; }
+        .brand-logo--light { display: none; }
+        .site-header:not(.is-scrolled) .brand-logo--light { display: block; }
+        .site-header:not(.is-scrolled) .brand-logo--dark { display: none; }
         .main-nav { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 36px); }
         .main-nav a { position: relative; padding: 8px 0; font-size: 13px; font-weight: 600; }
         .main-nav a::after { position: absolute; right: 0; bottom: 2px; left: 0; height: 1px; background: var(--accent); content: ""; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
         .main-nav a:hover::after { transform: scaleX(1); }
         .header-call { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; white-space: nowrap; }
-        .header-call-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: var(--accent); }
+        .header-call-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: var(--accent); font-size: 16px; }
         .is-scrolled .header-call-mark { border-color: var(--line); }
         .menu-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; }
         .menu-toggle span { display: block; height: 1px; margin: 5px 0; background: currentColor; transition: transform .2s ease; }
         .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
         .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
 
-        .hero { position: relative; display: flex; min-height: min(820px, 100svh); align-items: center; overflow: hidden; background: #353631 url("https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?q=85&w=2200&auto=format&fit=crop") center 54%/cover no-repeat; color: white; }
+        .hero { position: relative; display: flex; min-height: min(820px, 100svh); align-items: center; overflow: hidden; background: #353631 url("assets/images/projects/01-24-life-exotica-residential-project.jpg") center 54%/cover no-repeat; color: white; }
         .hero::before { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(19,21,19,.82) 0%, rgba(19,21,19,.62) 43%, rgba(19,21,19,.13) 100%), linear-gradient(0deg, rgba(19,21,19,.25), transparent 45%); content: ""; }
         .hero-content { position: relative; z-index: 1; padding-top: 80px; }
         .hero .eyebrow { color: #e1a77d; }
@@ -89,7 +143,7 @@
         .intro-label { color: var(--muted); font-size: 12px; line-height: 1.4; }
 
         .about-grid { display: grid; grid-template-columns: .94fr 1fr; align-items: center; gap: clamp(48px, 8vw, 112px); }
-        .about-photo { position: relative; min-height: 555px; background: #ddd url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=85&w=1100&auto=format&fit=crop") center/cover no-repeat; }
+        .about-photo { position: relative; min-height: 555px; background: #ddd url("assets/images/projects/02-aditya-enclave-project.jpg") center/cover no-repeat; }
         .about-photo::after { position: absolute; inset: 16px -16px -16px 16px; z-index: -1; border: 1px solid #d9d7cf; content: ""; }
         .about-badge { position: absolute; right: -1px; bottom: 0; width: 185px; padding: 23px; background: var(--accent); color: white; }
         .about-badge strong { display: block; font: 700 36px/1 var(--serif); letter-spacing: -.06em; }
@@ -166,7 +220,13 @@
         .field input, .field textarea { width: 100%; min-height: 49px; padding: 12px 13px; border: 1px solid #deded8; border-radius: 0; background: #fff; color: var(--ink); }
         .field textarea { min-height: 125px; resize: vertical; }
         .contact-form .button { margin-top: 20px; cursor: pointer; }
+        .contact-form .button:disabled { cursor: wait; opacity: .7; }
         .form-note { margin: 12px 0 0; color: var(--muted); font-size: 11px; }
+        .form-status { min-height: 1.5em; margin: 12px 0 0; color: var(--accent-dark); font-size: 13px; font-weight: 600; }
+        .form-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+        .privacy-consent { display: flex; align-items: flex-start; gap: 10px; margin-top: 17px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+        .privacy-consent input { flex: 0 0 auto; margin-top: 4px; accent-color: var(--accent-dark); }
+        .privacy-consent a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 2px; }
         .map-wrap { width: 100%; height: 330px; margin-top: 66px; overflow: hidden; background: #e8e8e4; }
         .map-wrap iframe { width: 100%; height: 100%; border: 0; }
 
@@ -182,6 +242,7 @@
         .footer-links a:hover { color: #e2a77e; }
         .footer-bottom { display: flex; justify-content: space-between; gap: 16px; padding-top: 19px; border-top: 1px solid #494a44; color: #aeb0a9; font-size: 11px; }
         .footer-social { display: flex; gap: 18px; margin-top: 19px; color: #e2a77e; font-size: 12px; font-weight: 700; }
+        .footer-brand .brand-logo { width: 170px; }
         .back-top { position: fixed; right: 20px; bottom: 20px; z-index: 10; display: grid; width: 42px; height: 42px; place-items: center; background: var(--ink); color: white; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s, transform .2s; }
         .back-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
@@ -216,8 +277,7 @@
             .site-header, .site-header.is-scrolled { height: 70px; border-color: rgba(255,255,255,.18); }
             .site-header.is-scrolled { border-color: var(--line); }
             .header-inner { gap: 14px; }
-            .brand-mark { width: 35px; height: 35px; }
-            .brand-name { font-size: 14px; }
+            .brand-logo { width: 148px; }
             .menu-toggle { display: block; flex: 0 0 44px; }
             .main-nav { position: fixed; top: 70px; right: 0; left: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 9px 22px 19px; border-bottom: 1px solid var(--line); background: white; color: var(--ink); box-shadow: 0 15px 30px rgba(0,0,0,.1); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity .2s, transform .2s; }
             .main-nav.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
@@ -273,13 +333,13 @@
     <header class="site-header" id="site-header">
         <div class="container header-inner">
             <a class="brand" href="#home" aria-label="Sujit Associate home">
-                <span class="brand-mark" aria-hidden="true">S</span>
-                <span><span class="brand-name">Sujit Associate</span><span class="brand-caption">RCC construction</span></span>
+                <img class="brand-logo brand-logo--light" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo_1.png" alt="Sujit Associate">
+                <img class="brand-logo brand-logo--dark" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo.png" alt="Sujit Associate">
             </a>
             <nav class="main-nav" id="main-nav" aria-label="Main navigation">
                 <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#approach">Our approach</a><a href="#contact">Contact</a>
             </nav>
-            <a class="header-call" href="tel:+918698975858"><span class="header-call-mark" aria-hidden="true">↗</span><span>+91 869 897 5858</span></a>
+            <a class="header-call" href="tel:+918698975858"><span class="header-call-mark" aria-hidden="true">☎</span><span>+91 869 897 5858</span></a>
             <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
         </div>
     </header>
@@ -308,7 +368,7 @@
 
         <section class="section" id="about">
             <div class="container about-grid">
-                <div class="about-photo reveal" role="img" aria-label="Modern high-rise architecture in a city"><div class="about-badge"><strong>30 years</strong><span>of construction expertise</span></div></div>
+                <div class="about-photo reveal" role="img" aria-label="Aditya Enclave residential project in Hinjewadi"><div class="about-badge"><strong>30 years</strong><span>of construction expertise</span></div></div>
                 <div class="reveal">
                     <p class="eyebrow">About Sujit Associate</p>
                     <h2 class="section-title">We build more than structures.</h2>
@@ -353,19 +413,19 @@
                     </div>
                 </div>
                 <div class="project-grid" id="project-grid">
-                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="https://is1-3.housingcdn.com/4f2250e8/44e322f62338d537b8e267a7d6b011e3/v0/fs/24life_exotica-dudulgaon-pune-24life.jpeg" alt="24 Life Exotica residential project" loading="lazy"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>24 Life Exotica</h3><p>Dudulgaon, Pune</p></div><a class="project-link" href="https://www.24life.in/ongoing-projects.php" target="_blank" rel="noopener noreferrer" aria-label="Visit 24 Life Exotica project website">↗</a></div></article>
-                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="https://www.adityaenclave.com/wp-content/uploads/2023/06/Aditya-Enclave-bro-front-back-4-01-min-3-1024x724.jpg" alt="Aditya Enclave project" loading="lazy"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>Aditya Enclave</h3><p>Hinjewadi P2</p></div><a class="project-link" href="https://www.adityaenclave.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Aditya Enclave project website">↗</a></div></article>
-                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="https://is1-2.housingcdn.com/4f2250e8/99b5019bbfb6a5863c89aad37eeb255b/v0/fs/swaraaj_paradise_phase_3-pimple_saudagar-pune-swaraaj_developers.jpeg" alt="Swaraaj Paradise Phase 3" loading="lazy"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>Swaraaj Paradise</h3><p>Pimple Saudagar, Pune</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://static.squareyards.com/resources/images/pune/project-image/kshitej-24-life-blooms-project-project-large-image1-2228.jpg" alt="Kshitej 24 Life Blooms project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Kshitej 24 Life Blooms</h3><p>Tathawade, Pune</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://is1-3.housingcdn.com/4f2250e8/6fbabb27e662b0cda006638d13630f86/v5/fs/shree_anand_royal_court-thergaon-pune-shree_anand_venkateshwara_construction.jpg" alt="Shree Anand Royal Court project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Shree Anand Royal Court</h3><p>Thergaon</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://housing-images.n7net.in/4f2250e8/785e72ded01f9f79244c78a6dd616f6e/v5/medium/diamond_group_pune_bhalchandra_nagari-ravet-pune-diamond_developers.jpg" alt="Vighnaharta Sai Saroj project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Vighnaharta Sai Saroj</h3><p>Ravet</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://img.staticmb.com/mbimages/project/Photo_h240_w0/2023/04/03/Project-Photo-1-Sai-Dwarka-Paradise-Pune-5326107_345_1366_240_0.jpg" alt="Krishna Rama Properties project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Krishna Rama Properties</h3><p>Kiwale</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://assets.nobroker.in/media/building/8a9fb3827d7f1b44017d7f4573b4164a/images/8a9fb3827d7f1b44017d7f4573b4164a_project_image_feBw1CPG9h1638528375132_65891_iris_original.jpg" alt="Sai Dwarka Paradise project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Sai Dwarka Paradise</h3><p>Kiwale</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://lh3.googleusercontent.com/p/AF1QipMl4Z1zx0XfTSUwV49pdr9yxnA7wpVq6t14OZuY=s680-w680-h510" alt="Swaraaj Paradise residential project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Swaraaj Paradise</h3><p>Pimple Saudagar, Pune</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://lh3.googleusercontent.com/96Tz8w54dfyhJ6yf0IZq4Rjo5ljf29Zpvy_BBG2az3Ylz8CXeBXXykBPOnsjxVMVmSuIu0TnCjlHbMBMWqUR=w3840-h3840-c-rw-v3" alt="Sonigara Rosalia residential project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Sonigara Rosalia</h3><p>Dehu Road, Pune</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://housing-images.n7net.in/4f2250e8/035ad6d04c3aeed5e7109ea07dd7c28e/v0/fs.jpeg" alt="Om Paradise residential project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Om Paradise</h3><p>Vikas Nagar, Pune</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://housing-images.n7net.in/4f2250e8/be9d9e8be7fc4672c10fa6369e829381/v0/medium/mercury_artharaj_royal_cassia-dehu-pune-mercury_artharaj.jpeg" alt="Anandban Society project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Anandban Society</h3><p>Dehu</p></div></div></article>
-                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="https://is1-3.housingcdn.com/012c1500/a121d8ca3898cc7722f9485d3924f556/v0/medium.jpeg" alt="Apple Aroma project" loading="lazy"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Apple Aroma</h3><p>Maan, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="assets/images/projects/01-24-life-exotica-residential-project.jpg" alt="24 Life Exotica residential project" width="1160" height="653" loading="lazy" decoding="async"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>24 Life Exotica</h3><p>Dudulgaon, Pune</p></div><a class="project-link" href="https://www.24life.in/ongoing-projects.php" target="_blank" rel="noopener noreferrer" aria-label="Visit 24 Life Exotica project website">↗</a></div></article>
+                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="assets/images/projects/02-aditya-enclave-project.jpg" alt="Aditya Enclave residential project" width="1024" height="724" loading="lazy" decoding="async"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>Aditya Enclave</h3><p>Hinjewadi P2</p></div><a class="project-link" href="https://www.adityaenclave.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Aditya Enclave project website">↗</a></div></article>
+                    <article class="project-card reveal" data-status="ongoing"><div class="project-image"><img src="assets/images/projects/03-swaraaj-paradise-phase-3.jpg" alt="Swaraaj Paradise Phase 3" width="1160" height="659" loading="lazy" decoding="async"><span class="project-status">Ongoing</span></div><div class="project-meta"><div><h3>Swaraaj Paradise</h3><p>Pimple Saudagar, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/04-kshitej-24-life-blooms-project.jpg" alt="Kshitej 24 Life Blooms project" width="1600" height="800" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Kshitej 24 Life Blooms</h3><p>Tathawade, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/05-shree-anand-royal-court-project.jpg" alt="Shree Anand Royal Court project" width="1160" height="680" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Shree Anand Royal Court</h3><p>Thergaon</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/06-vighnaharta-sai-saroj-project.jpg" alt="Vighnaharta Sai Saroj project" width="400" height="225" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Vighnaharta Sai Saroj</h3><p>Ravet</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/07-krishna-rama-properties-project.jpg" alt="Krishna Rama Properties project" width="950" height="240" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Krishna Rama Properties</h3><p>Kiwale</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/08-sai-dwarka-paradise-project.jpg" alt="Sai Dwarka Paradise project" width="481" height="353" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Sai Dwarka Paradise</h3><p>Kiwale</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/09-swaraaj-paradise-residential-project.jpg" alt="Swaraaj Paradise residential project" width="680" height="340" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Swaraaj Paradise</h3><p>Pimple Saudagar, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/10-sonigara-rosalia-residential-project.jpg" alt="Sonigara Rosalia residential project" width="1200" height="1200" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Sonigara Rosalia</h3><p>Dehu Road, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/11-om-paradise-residential-project.jpg" alt="Om Paradise residential project" width="1160" height="816" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Om Paradise</h3><p>Vikas Nagar, Pune</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/12-anandban-society-project.jpg" alt="Anandban Society project" width="400" height="276" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Anandban Society</h3><p>Dehu</p></div></div></article>
+                    <article class="project-card reveal" data-status="completed"><div class="project-image"><img src="assets/images/projects/13-apple-aroma-project.jpg" alt="Apple Aroma project" width="400" height="300" loading="lazy" decoding="async"><span class="project-status">Completed</span></div><div class="project-meta"><div><h3>Apple Aroma</h3><p>Maan, Pune</p></div></div></article>
                 </div>
             </div>
         </section>
@@ -411,7 +471,10 @@
                             <div class="contact-detail"><span>Email</span><a href="mailto:sujitassociates@gmail.com">sujitassociates@gmail.com</a></div>
                         </div>
                     </div>
-                    <form class="contact-form reveal" id="contact-form">
+                    <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/sujitassociates@gmail.com" data-ajax-action="https://formsubmit.co/ajax/sujitassociates@gmail.com" method="post">
+                        <input type="hidden" name="_subject" value="New project enquiry — Sujit Associate">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="form-honeypot" aria-hidden="true"><label for="website">Leave this field blank</label><input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
                         <div class="form-grid">
                             <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
                             <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
@@ -419,8 +482,10 @@
                             <div class="field field--wide"><label for="subject">Project / subject</label><input id="subject" name="subject" required></div>
                             <div class="field field--wide"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div>
                         </div>
-                        <button class="button" type="submit">Prepare email <span class="arrow" aria-hidden="true">→</span></button>
-                        <p class="form-note">This form opens your email app with your message addressed to Sujit Associate.</p>
+                        <label class="privacy-consent"><input type="checkbox" name="privacy_consent" value="yes" required><span>I agree to the <a href="privacy.html">Privacy Notice</a> and the processing of my enquiry to respond to my request.</span></label>
+                        <button class="button" type="submit">Send project enquiry <span class="arrow" aria-hidden="true">→</span></button>
+                        <p class="form-note">Your enquiry is sent securely to Sujit Associate using FormSubmit. A spam-protection challenge may appear.</p>
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
                 <div class="map-wrap reveal" aria-label="Map showing Sujit Associate in Wakad"><iframe title="Map showing Sujit Associate in Wakad, Pimpri-Chinchwad" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d945.3293626788042!2d73.76588026839934!3d18.604786023337798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1734259493169!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
@@ -435,11 +500,11 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">
-                <div><a class="brand" href="#home" aria-label="Sujit Associate home"><span class="brand-mark" aria-hidden="true">S</span><span><span class="brand-name">Sujit Associate</span><span class="brand-caption">RCC construction</span></span></a><p class="footer-about">We build more than structures—we build trust, relationships and a better future.</p><div class="footer-social"><a href="https://www.instagram.com/sujit_bhanavase/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
+                <div><a class="brand footer-brand" href="#home" aria-label="Sujit Associate home"><img class="brand-logo" src="html.themexriver.com/Saasio/assets/img/studio-img-32/final_logo_1.png" alt="Sujit Associate"></a><p class="footer-about">We build more than structures—we build trust, relationships and a better future.</p><div class="footer-social"><a href="https://www.instagram.com/sujit_bhanavase/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/918698975858?text=Hello%20there!" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
                 <div><h2 class="footer-heading">Explore</h2><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></nav></div>
                 <div><h2 class="footer-heading">Contact</h2><div class="footer-links"><a href="tel:+918698975858">+91 869 897 5858</a><a href="mailto:sujitassociates@gmail.com">sujitassociates@gmail.com</a><span>Datta Mandir, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057</span></div></div>
             </div>
-            <div class="footer-bottom"><span>Sujit Associate · © <span id="year"></span></span><a href="#home">Back to top ↑</a></div>
+            <div class="footer-bottom"><span>Sujit Associate · © <span id="year"></span></span><span><a href="privacy.html">Privacy notice</a> · <a href="#home">Back to top ↑</a></span></div>
         </div>
     </footer>
     <a class="back-top" id="back-top" href="#home" aria-label="Back to top">↑</a>
@@ -501,36 +566,52 @@
         });
 
         const contactForm = document.getElementById("contact-form");
-        contactForm.addEventListener("submit", (event) => {
+        contactForm.addEventListener("submit", async (event) => {
             event.preventDefault();
             if (!contactForm.reportValidity()) return;
-            const values = new FormData(contactForm);
-            const subject = encodeURIComponent(String(values.get("subject")));
-            const body = encodeURIComponent(
-                `Name: ${values.get("name")}\nPhone: ${values.get("phone") || "Not provided"}\nEmail: ${values.get("email")}\n\n${values.get("message")}`
-            );
-            window.location.href = `mailto:sujitassociates@gmail.com?subject=${subject}&body=${body}`;
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const formStatus = document.getElementById("form-status");
+            submitButton.disabled = true;
+            formStatus.textContent = "Sending your enquiry…";
+            try {
+                const response = await fetch(contactForm.dataset.ajaxAction, {
+                    method: "POST",
+                    headers: { Accept: "application/json" },
+                    body: new URLSearchParams(new FormData(contactForm))
+                });
+                const result = await response.json();
+                if (!response.ok || (result.success !== true && result.success !== "true")) {
+                    throw new Error(result.message || "The enquiry service rejected the request.");
+                }
+                contactForm.reset();
+                formStatus.textContent = "Thank you. Your enquiry has been sent to Sujit Associate.";
+            } catch (error) {
+                console.error("Unable to send the project enquiry.", error);
+                formStatus.textContent = "We couldn't send your enquiry. Please email sujitassociates@gmail.com or call +91 869 897 5858.";
+            } finally {
+                submitButton.disabled = false;
+            }
         });
 
         const equipment = [
-            ["BAR BENDING MACHINE", "https://5.imimg.com/data5/SELLER/Default/2023/5/307375673/YA/XE/AY/1258844/spartan-sbm-55v-bar-bending-machines-500x500.png", "Efficiently bends steel bars for construction with precision."],
-            ["BAR CUTTING MACHINE", "https://5.imimg.com/data5/SELLER/Default/2022/10/LV/CJ/NR/141946453/bar-cutting-machine-500x500.jpg", "Cuts steel bars to precise lengths for reinforcement."],
-            ["CUPLOCK SCAFFOLDING", "https://images.jdmagicbox.com/quickquotes/images_main/mild-steel-red-color-vertical-standard-cuplock-scaffolding-pipe-3-meter-weight-13-7-kg-2222349926-x55594l3.jpg", "Available in sizes such as 1.5m, 2m and 2.5m for reliable support and safety."],
-            ["CONCRETE MIXER", "https://4.imimg.com/data4/YH/UT/MY-4587209/concrete-mixer.jpg", "Blends cement, water and aggregates for concrete."],
-            ["BASE PLATE", "https://www.grsscaffolding.com/images/product/base-plate.jpg", "Provides stable scaffolding support and load distribution."],
-            ["H FRAMES", "https://5.imimg.com/data5/SELLER/Default/2020/12/YK/GF/CK/2379454/h-frames-scaffolding.jpg", "Strong, stable support frames for construction."],
-            ["MS PROPS", "https://5.imimg.com/data5/NN/KK/MY-2/ms-scaffolding-prop-jpg-500x500.jpg", "Adjustable support for stability during construction."],
-            ["I CHANNEL", "https://bhagwatishuttering.com/wp-content/uploads/2020/06/steel_beams1.jpg", "Shuttering support for slabs during construction."],
-            ["MS PLATE", "https://5.imimg.com/data5/SELLER/Default/2021/12/EV/YY/LJ/120128070/mild-steel-shuttering-plate-500x500.jpeg", "High tensile strength plates for structural support."],
-            ["CONCRETE LIFT MACHINE", "https://hipat.in/wp-content/uploads/2023/01/Concrete-Lift-Machine.jpg", "Transfers concrete efficiently to higher levels."],
-            ["LEDGER SCAFFOLDING", "https://udemandme.com/wp-content/uploads/2020/09/a33544a_dx_0109_photo_3009.jpg", "Available in sizes such as 0.9m, 1.2m and 1.5m for support and stability."],
-            ["CONCRETE WEIGHT BATCHER", "https://img1.exportersindia.com/product_images/bc-small/2018/7/3463491/digital-scale-type-machine-1793475.jpg", "Measures concrete ingredients for accurate proportions."],
-            ["VIBRATOR MACHINE", "https://m.media-amazon.com/images/I/71UIpgz6GML.jpg", "Removes air pockets for a smooth concrete finish, with different needles for different applications."],
-            ["SQUARE TUBE", "https://www.jfeindia.com/img/cold-formed-sqaure-section-1.jpg", "Durable, precise support for slab formwork."],
-            ["ROUND TUBE", "https://cpimg.tistatic.com/08459626/b/4/Mild-Steel-Round-Tube.jpg", "Robust scaffolding support with effective load distribution."],
-            ["TIE ROD", "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Large/tie-rod-end-18-20-mm-size-16-mm20240108100257.jpg", "Stabilizes column shuttering and maintains alignment."],
-            ["WATERPROOF PLY", "https://5.imimg.com/data5/ANDROID/Default/2023/4/304298891/QO/YN/VV/24755526/product-jpeg-500x500.jpg", "Supports formwork during concrete casting."],
-            ["WOODEN PROPS", "https://5.imimg.com/data5/SELLER/Default/2021/12/FW/AQ/EW/22831734/shuttering-wooden-prop-rental-500x500.jpg", "Available in 8ft, 9ft and 10ft sizes to support formwork."]
+            ["BAR BENDING MACHINE", "assets/images/equipment/01-bar-bending-machine.jpg", "Efficiently bends steel bars for construction with precision."],
+            ["BAR CUTTING MACHINE", "assets/images/equipment/02-bar-cutting-machine.jpg", "Cuts steel bars to precise lengths for reinforcement."],
+            ["CUPLOCK SCAFFOLDING", "assets/images/equipment/03-cuplock-scaffolding.jpg", "Available in sizes such as 1.5m, 2m and 2.5m for reliable support and safety."],
+            ["CONCRETE MIXER", "assets/images/equipment/04-concrete-mixer.jpg", "Blends cement, water and aggregates for concrete."],
+            ["BASE PLATE", "assets/images/equipment/05-base-plate.jpg", "Provides stable scaffolding support and load distribution."],
+            ["H FRAMES", "assets/images/equipment/06-h-frames.jpg", "Strong, stable support frames for construction."],
+            ["MS PROPS", "assets/images/equipment/07-ms-props.jpg", "Adjustable support for stability during construction."],
+            ["I CHANNEL", "assets/images/equipment/08-i-channel.jpg", "Shuttering support for slabs during construction."],
+            ["MS PLATE", "assets/images/equipment/09-ms-plate.jpg", "High tensile strength plates for structural support."],
+            ["CONCRETE LIFT MACHINE", "assets/images/equipment/10-concrete-lift-machine.jpg", "Transfers concrete efficiently to higher levels."],
+            ["LEDGER SCAFFOLDING", "assets/images/equipment/11-ledger-scaffolding.jpg", "Available in sizes such as 0.9m, 1.2m and 1.5m for support and stability."],
+            ["CONCRETE WEIGHT BATCHER", "assets/images/equipment/12-concrete-weight-batcher.jpg", "Measures concrete ingredients for accurate proportions."],
+            ["VIBRATOR MACHINE", "assets/images/equipment/13-vibrator-machine.jpg", "Removes air pockets for a smooth concrete finish, with different needles for different applications."],
+            ["SQUARE TUBE", "assets/images/equipment/14-square-tube.jpg", "Durable, precise support for slab formwork."],
+            ["ROUND TUBE", "assets/images/equipment/15-round-tube.jpg", "Robust scaffolding support with effective load distribution."],
+            ["TIE ROD", "assets/images/equipment/16-tie-rod.jpg", "Stabilizes column shuttering and maintains alignment."],
+            ["WATERPROOF PLY", "assets/images/equipment/17-waterproof-ply.jpg", "Supports formwork during concrete casting."],
+            ["WOODEN PROPS", "assets/images/equipment/18-wooden-props.jpg", "Available in 8ft, 9ft and 10ft sizes to support formwork."]
         ];
         const equipmentGrid = document.getElementById("equipment-grid");
         equipment.forEach(([name, image, description]) => {
